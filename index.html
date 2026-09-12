@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>明星中学校・高等学校 教職員組合</title>
-<meta name="description" content="明星学苑教職員組合（明星中学校・高等学校）の綱領・規約、労働協約、活動、加入案内。">
+<title>明星学苑（中学校・高等学校） 教職員組合</title>
+<meta name="description" content="明星学苑（中学校・高等学校）教職員組合の綱領・規約、労働協約、活動、加入案内。">
 <style>
 /* ============================================================
    配色・書体の設定（ここを変えると全体の見た目が変わります）
@@ -246,7 +246,7 @@ footer{border-top:1px solid var(--rule); margin-top:3rem}
 
 <header class="masthead">
   <div class="masthead-inner">
-    <div class="brand">明星中学校・高等学校 教職員組合<span>MEISEI GAKUEN STAFF UNION</span></div>
+    <div class="brand">明星学苑（中学校・高等学校） 教職員組合<span>MEISEI GAKUEN STAFF UNION</span></div>
     <nav class="tabs" role="tablist" aria-label="ページの切りかえ">
       <button class="tab" role="tab" id="tab-open"   aria-controls="panel-open"   aria-selected="true">組合について</button>
       <button class="tab" role="tab" id="tab-member" aria-controls="panel-member" aria-selected="false">組合員のページ<span class="lockmark">鍵</span></button>
@@ -265,8 +265,8 @@ footer{border-top:1px solid var(--rule); margin-top:3rem}
   <div class="hero">
     <div class="hero-copy">
       <img class="emblem" src="logo.png" width="118" height="118" alt="2026年 明星学苑教職員組合">
-      <h1><small>明星学苑教職員組合</small>働く条件は、<br>話し合いで決まる。</h1>
-      <p class="lead">明星学苑で働くすべての教職員のための労働組合です。賃金も、労働時間も、人事異動の進め方も、学苑と組合が協議して決めると労働協約で約束されています。その約束を使い、守り、次の世代に渡していくのが私たちの仕事です。</p>
+      <h1><small>明星学苑（中学校・高等学校）教職員組合</small>明星の教育は、<br>皆で守り伝える。</h1>
+      <p class="lead">明星学苑（中学校・高等学校）で働くすべての教職員のための労働組合です。賃金も、労働時間も、人事異動の進め方も、学苑と組合が協議して決めると労働協約で約束されています。その約束を使い、守り、次の世代に渡していくのが私たちの仕事です。</p>
       <div class="hero-actions">
         <a class="btn" href="#join">組合に入る</a>
         <a class="btn ghost" href="#soudan">相談してみる</a>
@@ -625,8 +625,8 @@ const PASS = {
    いない人にも枠だけが表示され、内容は見えません。
    ========================================================== */
 const CALENDAR = {
-  member: { id:"", note:"組合員カレンダー" },
-  exec:   { id:"", note:"執行委員カレンダー" }
+  member: { id:"https://calendar.google.com/calendar/u/3?cid=MGQ0ZTMxNmQ2Nzk0ZTIwNTMxNjRhMzY5NGM0YTBlZjZmZjYzNDAzMDcwNDZmMGZjN2I2MDBkNGM2MWQ2MGIyNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t", note:"組合員カレンダー" },
+  exec:   { id:"https://calendar.google.com/calendar/embed?src=dbe898f5f82dce3618969f4e6e34f76c47b782eb107fab5f9dfce4d85cdb10f7%40group.calendar.google.com&ctz=Asia%2FTokyo", note:"執行委員カレンダー" }
 };
 
 /* ==========================================================
@@ -646,9 +646,9 @@ const CALENDAR = {
    ウェブに公開はせず、共有相手を執行委員だけに限定してください。
    ========================================================== */
 const FORMS = {
-  opinion:   { embed:"", open:"" },   /* 組合員のページの意見箱 */
-  contact:   { embed:"", open:"" },   /* 組合について のページの相談フォーム */
-  responses: { url:"" }               /* 回答スプレッドシート（執行委員のみ） */
+  opinion:   { embed:"https://docs.google.com/forms/d/e/1FAIpQLSfuNM4e7WKrQJOk6Y6Eg9uFg9l0bNIqUz5fyAgKGtpHItM0EQ/viewform?usp=header", open:"" },   /* 組合員のページの意見箱 */
+  contact:   { embed:"https://docs.google.com/forms/d/e/1FAIpQLSf_-wXIsgTS8GVnEli25gPDyiZ68qMIhfPKE-mAG9xSjPj04w/viewform?usp=publish-editor", open:"" },   /* 組合について のページの相談フォーム */
+  responses: { url:"https://docs.google.com/spreadsheets/d/1Oj_lUIRrLm7QMuzUvFaba0W3V5JWA2LWDONMqDfQgvc/edit?resourcekey=&gid=1757336202#gid=1757336202" }               /* 回答スプレッドシート（執行委員のみ） */
 };
 
 /* ==========================================================
@@ -757,7 +757,7 @@ const DATA = {
     { post:"執行委員長",   name:"（氏名）",   charge:"総括・団体交渉" },
     { post:"副執行委員長", name:"（氏名）",   charge:"労使協議会" },
     { post:"書記長",       name:"（氏名）",   charge:"書記局・「前進」" },
-    { post:"副書記長",     name:"八幡 幸司", charge:"書記局・広報" },
+    { post:"副書記長",     name:"", charge:"書記局・広報" },
     { post:"会計",         name:"（氏名）",   charge:"財政部" },
     { post:"会計監査",     name:"（氏名）",   charge:"監査" }
   ],
