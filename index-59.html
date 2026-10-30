@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>明星学苑（府中校） 教職員組合</title>
+<meta name="description" content="明星学苑（府中校）教職員組合の綱領・規約、労働協約、活動、加入案内。">
+<style>
+/* ============================================================
+   配色・書体の設定（ここを変えると全体の見た目が変わります）
+   ============================================================ */
+:root{
+  --ink:      #16233A;   /* 基調色（紺） */
+  --ink-soft: #46546E;   /* 本文の補助色 */
+  --paper:    #E8ECF0;   /* 背景（淡い青灰） */
+  --card:     #FFFFFF;
+  --brass:    #9C7526;   /* 差し色（真鍮） */
+  --rule:     #C3CCD6;   /* 罫線 */
+  --alert:    #9E3A2E;
+  --enji:     #8E0B0B;   /* 表章の臙脂（マークまわりだけ） */
+
+  --mincho: "Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP","MS PMincho",serif;
+  --gothic: "Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP","Meiryo",sans-serif;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--gothic); font-size:16px; line-height:1.85;
+  font-feature-settings:"palt" 1;
+}
+a{color:var(--ink); text-underline-offset:.2em; text-decoration-thickness:1px}
+a:hover{color:var(--brass)}
+:focus-visible{outline:2px solid var(--brass); outline-offset:3px}
+
+/* ---------- ヘッダーとタブ ---------- */
+.masthead{
+  position:sticky; top:0; z-index:20;
+  background:var(--ink); color:#fff;
+  border-bottom:3px solid var(--brass);
+}
+.masthead-inner{
+  max-width:1060px; margin:0 auto; padding:.7rem 1.25rem;
+  display:flex; flex-wrap:wrap; gap:.6rem 1.5rem; align-items:center; justify-content:space-between;
+}
+.brand{font-family:var(--mincho); font-size:1.05rem; letter-spacing:.08em; line-height:1.4}
+.brand span{display:block; font-family:var(--gothic); font-size:.72rem; letter-spacing:.24em; color:#AFC0D6}
+.tabs{display:flex; gap:.15rem}
+.tab{
+  appearance:none; border:0; background:transparent; cursor:pointer;
+  color:#C4D2E4; font-family:var(--gothic); font-size:.92rem; padding:.5rem .85rem;
+  border-bottom:3px solid transparent; margin-bottom:-3px;
+}
+.tab:hover{color:#fff}
+.tab[aria-selected="true"]{color:#fff; border-bottom-color:var(--brass); font-weight:700}
+.tab .lockmark{font-size:.75rem; opacity:.75; margin-left:.25em}
+
+/* ---------- 全体レイアウト ---------- */
+main{max-width:1060px; margin:0 auto; padding:0 1.25rem 5rem}
+.panel[hidden]{display:none}
+.wrap{max-width:46rem}
+
+h2{
+  font-family:var(--mincho); font-size:1.5rem; font-weight:600;
+  margin:3.2rem 0 .2rem; line-height:1.5; letter-spacing:.04em;
+}
+h2::after{content:""; display:block; width:2.6rem; height:2px; background:var(--brass); margin-top:.55rem}
+h3{font-family:var(--mincho); font-size:1.12rem; font-weight:600; margin:2rem 0 .4rem}
+p{margin:.8rem 0}
+.lead{font-size:1.03rem; color:var(--ink-soft)}
+.note{font-size:.86rem; color:var(--ink-soft)}
+
+/* ---------- ヒーロー ---------- */
+.hero{
+  display:flex; gap:2.5rem; align-items:flex-start; justify-content:space-between;
+  padding:3.4rem 0 2.8rem; border-bottom:1px solid var(--rule);
+}
+.hero-copy{max-width:30rem}
+.emblem{
+  display:block; width:118px; height:118px; margin:0 0 1.5rem;
+  border:1px solid var(--rule); box-shadow:0 1px 0 rgba(22,35,58,.06);
+}
+.hero h1{
+  font-family:var(--mincho); font-weight:600; font-size:2.05rem; line-height:1.45;
+  margin:0 0 .9rem; letter-spacing:.03em;
+}
+.hero h1 small{display:block; font-size:.98rem; letter-spacing:.18em; color:var(--brass); margin-bottom:.5rem; font-family:var(--gothic)}
+.hero-actions{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.4rem}
+.btn{
+  display:inline-block; font-size:.92rem; padding:.6rem 1.2rem; border-radius:2px;
+  background:var(--ink); color:#fff; text-decoration:none; border:1px solid var(--ink); cursor:pointer;
+  font-family:var(--gothic);
+}
+.btn:hover{background:#0E1728; color:#fff}
+.btn.ghost{background:transparent; color:var(--ink)}
+.btn.ghost:hover{background:rgba(22,35,58,.06); color:var(--ink)}
+
+.kouryou-hero{
+  border-right:2px solid var(--brass); padding-right:1.6rem;
+  font-family:var(--mincho); font-size:1.24rem; line-height:2.1; letter-spacing:.12em;
+  writing-mode:vertical-rl; text-orientation:upright; height:20rem;
+}
+.kouryou-hero cite{
+  display:block; font-style:normal; font-size:.8rem; letter-spacing:.3em;
+  color:var(--brass); margin-right:1.1rem; font-family:var(--gothic);
+}
+
+/* ---------- 箱・表 ---------- */
+.sheet{background:var(--card); border:1px solid var(--rule); padding:1.3rem 1.5rem; margin:1.2rem 0}
+.sheet h3:first-child{margin-top:0}
+
+ol.kouryou{list-style:none; counter-reset:k; padding:0; margin:1.4rem 0}
+ol.kouryou li{
+  counter-increment:k; position:relative; padding:0 0 1.05rem 2.6rem;
+  font-family:var(--mincho); font-size:1.04rem; line-height:1.95;
+}
+ol.kouryou li::before{
+  content:counter(k,cjk-ideographic); position:absolute; left:0; top:.12em;
+  font-family:var(--mincho); color:var(--brass); font-size:.95rem;
+  border:1px solid var(--brass); width:1.75rem; height:1.75rem; line-height:1.65rem; text-align:center;
+}
+
+dl.timeline{margin:1.4rem 0 0; padding:0; border-left:1px solid var(--rule)}
+dl.timeline dt{
+  font-family:var(--mincho); font-size:1rem; color:var(--brass);
+  padding-left:1.1rem; position:relative; letter-spacing:.05em;
+}
+dl.timeline dt::before{
+  content:""; position:absolute; left:-4px; top:.75em; width:7px; height:7px;
+  background:var(--paper); border:1px solid var(--brass); border-radius:50%;
+}
+dl.timeline dd{margin:0 0 1.4rem; padding-left:1.1rem}
+
+details.art{border-top:1px solid var(--rule); padding:.15rem 0}
+details.art:last-of-type{border-bottom:1px solid var(--rule)}
+details.art summary{
+  cursor:pointer; padding:.75rem .2rem; font-family:var(--mincho); font-size:1.02rem;
+  list-style:none; display:flex; justify-content:space-between; gap:1rem; align-items:baseline;
+}
+details.art summary::-webkit-details-marker{display:none}
+details.art summary::after{content:"ひらく"; font-family:var(--gothic); font-size:.76rem; color:var(--brass); white-space:nowrap}
+details.art[open] summary::after{content:"とじる"}
+details.art .body{padding:0 .2rem 1.1rem; font-size:.95rem}
+details.art ul{margin:.4rem 0; padding-left:1.2rem}
+details.art li{margin:.3rem 0}
+
+table{width:100%; border-collapse:collapse; margin:1rem 0; font-size:.94rem}
+th,td{text-align:left; padding:.65rem .7rem; border-bottom:1px solid var(--rule); vertical-align:top}
+th{font-weight:700; white-space:nowrap; color:var(--ink)}
+thead th{border-bottom:2px solid var(--ink); font-size:.85rem}
+
+ul.plain{list-style:none; padding:0; margin:1rem 0}
+ul.plain li{padding:.7rem 0; border-bottom:1px solid var(--rule); display:flex; gap:1rem; flex-wrap:wrap}
+ul.plain li .when{font-family:var(--mincho); color:var(--brass); min-width:7.5rem}
+
+.calwrap{background:var(--card); border:1px solid var(--rule); padding:.5rem; margin:1.2rem 0}
+.calwrap iframe{display:block; width:100%; height:620px; border:0}
+.countdown{
+  display:flex; gap:1.4rem; align-items:center; flex-wrap:wrap;
+  background:var(--ink); color:#fff; padding:1.15rem 1.5rem; margin:1.4rem 0 0;
+  border-left:4px solid var(--brass);
+}
+.cd-num{font-family:var(--mincho); font-size:1rem; line-height:1; white-space:nowrap}
+.cd-num b{font-size:2.9rem; font-weight:400; letter-spacing:.02em; margin-right:.12em}
+.cd-body{flex:1; min-width:12rem}
+.cd-title{font-family:var(--mincho); font-size:1.16rem; margin:0}
+.cd-sub{margin:.25rem 0 0; font-size:.85rem; color:#B9C7DA}
+.cd-none{background:var(--card); color:var(--ink-soft); border-left-color:var(--rule); font-size:.92rem}
+.cd-wrap{margin:1.4rem 0 0}
+.cd-wrap .countdown{margin:0}
+.cd-more{
+  background:var(--ink); color:#fff; border-left:4px solid var(--brass);
+  margin:0; padding:.2rem 1.5rem .9rem; list-style:none;
+}
+.cd-more li{
+  display:flex; gap:.9rem; align-items:baseline; flex-wrap:wrap;
+  padding:.5rem 0; border-top:1px solid rgba(255,255,255,.14); font-size:.9rem;
+}
+.cd-more .md{font-family:var(--mincho); color:var(--gold,#D9B36B); min-width:7.5rem; white-space:nowrap}
+.cd-more .mt{flex:1; min-width:9rem}
+.cd-more .mw{color:#AFC0D6; font-size:.84rem}
+.cd-more .mn{font-family:var(--mincho); white-space:nowrap; color:#E6ECF4}
+.cd-head{
+  background:var(--ink); color:#AFC0D6; border-left:4px solid var(--brass);
+  margin:0; padding:.75rem 1.5rem .1rem; font-size:.82rem; letter-spacing:.06em;
+}
+@media (max-width:860px){ .cd-more .md{min-width:100%} }
+
+.compose{background:var(--card); border:1px solid var(--rule); padding:1.3rem 1.5rem; margin:1.2rem 0}
+.compose label{display:block; font-size:.85rem; color:var(--ink-soft); margin:1.1rem 0 .3rem}
+.compose label:first-of-type{margin-top:0}
+.compose input[type=text], .compose textarea, .compose select{
+  width:100%; font-family:var(--gothic); font-size:.96rem; line-height:1.8;
+  padding:.6rem .75rem; border:1px solid var(--rule); border-radius:2px; background:#fff; color:var(--ink);
+}
+.compose textarea{min-height:11rem; resize:vertical}
+.compose input:focus, .compose textarea:focus, .compose select:focus{border-color:var(--brass); outline:none}
+.compose .row{display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; margin-top:1.3rem}
+.compose .meter{font-size:.8rem; color:var(--ink-soft)}
+.compose .meter.over{color:var(--alert)}
+
+/* ---------- 組合の歩み（詳細）---------- */
+.chron{margin:1.4rem 0}
+.chron .era{
+  font-family:var(--mincho); font-size:1.08rem; color:var(--ink);
+  border-bottom:1px solid var(--rule); padding:1.6rem 0 .45rem; margin:0 0 .3rem;
+}
+.chron .era:first-child{padding-top:.2rem}
+.chron .row{display:flex; gap:1rem; padding:.6rem 0; border-bottom:1px solid rgba(195,204,214,.5)}
+.chron .yr{
+  font-family:var(--mincho); color:var(--brass); font-size:.92rem;
+  min-width:6.5rem; white-space:nowrap; padding-top:.1rem;
+}
+.chron .ev{flex:1; font-size:.93rem; line-height:1.85}
+.chron .row.key .ev{font-weight:700}
+.chron .row.key .yr{color:var(--ink)}
+.chron .row.ctx .ev{color:var(--ink-soft); font-size:.88rem}
+
+/* ---------- 組合の力 ---------- */
+.power{background:var(--ink); color:#fff; padding:1.6rem 1.7rem; margin:1.4rem 0; border-left:4px solid var(--brass)}
+.power-top{display:flex; gap:1.6rem; align-items:baseline; flex-wrap:wrap}
+.power-n{font-family:var(--mincho); font-size:3.6rem; line-height:1; white-space:nowrap}
+.power-n small{font-size:1.2rem; margin-left:.12em}
+.power-say{font-family:var(--mincho); font-size:1.06rem; line-height:1.9; flex:1; min-width:13rem; color:#E6ECF4}
+.power-track{position:relative; height:2.4rem; margin:1.5rem 0 .4rem; background:rgba(255,255,255,.12)}
+.power-fill{height:100%; background:var(--brass); display:flex; align-items:center; padding-left:.7rem; font-size:.84rem; white-space:nowrap}
+.power-half{position:absolute; top:-.35rem; bottom:-.35rem; width:2px; background:#fff}
+.power-half span{position:absolute; left:50%; transform:translateX(-50%); top:-1.25rem; font-size:.74rem; letter-spacing:.06em; white-space:nowrap; color:#fff}
+.power-goal{margin:1.5rem 0 0; font-family:var(--mincho); font-size:1.14rem; line-height:1.8}
+.power-goal b{color:var(--brass); font-size:1.5rem; margin:0 .1em}
+.power-sub{margin:.9rem 0 0; font-size:.86rem; color:#AFC0D6; line-height:1.85}
+.power-sub .chk{border-color:#D9A14B; color:#D9A14B}
+.chk{display:inline-block; font-size:.72rem; border:1px solid var(--alert); color:var(--alert); padding:.02rem .45rem; margin-left:.4em; white-space:nowrap}
+@media (max-width:860px){ .power{padding:1.3rem 1.1rem} .power-n{font-size:2.8rem} }
+
+/* ---------- バトン ---------- */
+.baton{background:var(--card); border:1px solid var(--rule); padding:1.6rem 1.7rem; margin:1.2rem 0}
+.baton h3{margin:0 0 .7rem; font-size:1.18rem}
+.baton p{font-size:.97rem; line-height:1.95}
+.baton .lede{font-family:var(--mincho); font-size:1.06rem; line-height:2.05; margin:0 0 1.2rem}
+.relay{display:flex; align-items:stretch; gap:0; margin:1.5rem 0; flex-wrap:nowrap; overflow-x:auto; padding-bottom:.3rem}
+.relay .leg{flex:1; min-width:8.2rem; position:relative; padding:1.5rem .6rem 0 0}
+.relay .leg::before{content:""; position:absolute; left:0; right:0; top:.62rem; height:1px; background:var(--rule)}
+.relay .leg:last-child::before{right:60%}
+.relay .leg::after{
+  content:""; position:absolute; left:0; top:.2rem; width:.9rem; height:.9rem;
+  border-radius:50%; background:var(--paper); border:2px solid var(--brass);
+}
+.relay .leg.now::after{background:var(--brass)}
+.relay .yr{display:block; font-family:var(--mincho); color:var(--brass); font-size:.86rem; letter-spacing:.04em}
+.relay .wh{display:block; font-size:.86rem; line-height:1.75; margin-top:.2rem}
+.baton .close{font-family:var(--mincho); font-size:1.04rem; line-height:2.05; margin:1.3rem 0 0; padding-top:1.2rem; border-top:1px solid var(--rule)}
+@media (max-width:860px){
+  .relay{display:block; overflow:visible}
+  .relay .leg{padding:0 0 1.1rem 1.4rem; min-width:0}
+  .relay .leg::before{left:.42rem; right:auto; top:0; bottom:0; width:1px; height:auto}
+  .relay .leg:last-child::before{bottom:60%; right:auto}
+  .relay .leg::after{top:.15rem}
+}
+
+/* ---------- 組合員数の推移 ---------- */
+.bars{margin:1.4rem 0}
+.bars .b{display:flex; align-items:center; gap:.9rem; padding:.42rem 0}
+.bars .by{font-family:var(--mincho); color:var(--brass); font-size:.9rem; min-width:4.5rem; white-space:nowrap}
+.bars .bt{flex:1; background:rgba(22,35,58,.07); height:1.5rem; position:relative}
+.bars .bf{background:var(--ink); height:100%; min-width:2px}
+.bars .b.peak .bf{background:var(--brass)}
+.bars .bn{font-family:var(--mincho); font-size:.95rem; min-width:3.6rem; text-align:right; white-space:nowrap}
+.bars .b.none .bt{background:repeating-linear-gradient(45deg,rgba(22,35,58,.05),rgba(22,35,58,.05) 5px,transparent 5px,transparent 10px)}
+.bars .b.none .bn{color:var(--ink-soft); font-size:.82rem}
+
+.album{display:grid; grid-template-columns:repeat(auto-fill,minmax(15rem,1fr)); gap:1.1rem; margin:1.4rem 0}
+.album figure{margin:0; background:var(--card); border:1px solid var(--rule)}
+.album img{display:block; width:100%; height:11rem; object-fit:cover; background:var(--paper); cursor:zoom-in}
+.album figcaption{padding:.65rem .85rem; font-size:.86rem; line-height:1.7}
+.album .when{display:block; font-family:var(--mincho); color:var(--brass); font-size:.8rem; letter-spacing:.06em}
+.album-empty{padding:2.2rem 1.4rem; text-align:center; color:var(--ink-soft); font-size:.92rem; background:var(--card); border:1px solid var(--rule)}
+
+.lightbox{
+  position:fixed; inset:0; z-index:40; display:flex; align-items:center; justify-content:center;
+  background:rgba(10,16,28,.93); padding:1.5rem; border:0;
+}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:100%; max-height:82vh; object-fit:contain}
+.lightbox figcaption{color:#DCE5F0; font-size:.88rem; text-align:center; margin-top:.9rem; max-width:40rem}
+.lightbox .close{
+  position:absolute; top:1rem; right:1rem; appearance:none; cursor:pointer;
+  background:transparent; border:1px solid rgba(255,255,255,.5); color:#fff;
+  font-family:var(--gothic); font-size:.85rem; padding:.4rem .9rem; border-radius:2px;
+}
+.lightbox .close:hover{background:rgba(255,255,255,.14)}
+
+.formwrap{background:var(--card); border:1px solid var(--rule); padding:.5rem; margin:1.2rem 0}
+.formwrap iframe{display:block; width:100%; height:780px; border:0; background:#fff}
+.status{display:inline-block; font-size:.74rem; letter-spacing:.06em; padding:.1rem .55rem; border:1px solid var(--rule); color:var(--ink-soft); white-space:nowrap}
+.status.now{border-color:var(--brass); color:var(--brass)}
+.status.done{border-color:#3E6B4E; color:#3E6B4E}
+.calbar{display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; margin:.9rem 0 0}
+.calempty{padding:2.2rem 1.4rem; text-align:center; color:var(--ink-soft); font-size:.92rem}
+@media (max-width:860px){ .calwrap iframe{height:460px} }
+
+.callout{border-left:3px solid var(--brass); background:rgba(156,117,38,.07); padding:.9rem 1.2rem; margin:1.4rem 0}
+.callout.warn{border-left-color:var(--alert); background:rgba(158,58,46,.07)}
+.callout p:first-child{margin-top:0}
+.callout p:last-child{margin-bottom:0}
+
+.tag{display:inline-block; font-size:.74rem; letter-spacing:.08em; border:1px solid var(--rule); padding:.1rem .5rem; color:var(--ink-soft)}
+.tag.on{border-color:var(--brass); color:var(--brass)}
+
+/* ---------- 合言葉の入力画面 ---------- */
+.gate{max-width:29rem; margin:5rem auto; background:var(--card); border:1px solid var(--rule); padding:2.2rem 2rem; text-align:center}
+.gate h2{margin-top:0; font-size:1.25rem}
+.gate h2::after{margin:.55rem auto 0}
+.gate form{display:flex; gap:.5rem; margin-top:1.4rem}
+.gate input{
+  flex:1; padding:.65rem .8rem; font-size:1rem; font-family:var(--gothic);
+  border:1px solid var(--rule); background:#fff; color:var(--ink); border-radius:2px;
+}
+.gate input:focus{border-color:var(--brass)}
+.gate .msg{min-height:1.4rem; margin:.8rem 0 0; font-size:.88rem; color:var(--alert)}
+
+.paneltop{display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:1.1rem 0; border-bottom:1px solid var(--rule); flex-wrap:wrap}
+.paneltop .who{font-family:var(--mincho); font-size:1.1rem}
+.lockbtn{appearance:none; background:none; border:1px solid var(--rule); color:var(--ink-soft); font-size:.8rem; padding:.35rem .8rem; cursor:pointer; border-radius:2px; font-family:var(--gothic)}
+.lockbtn:hover{border-color:var(--ink); color:var(--ink)}
+
+footer{border-top:1px solid var(--rule); margin-top:3rem}
+.footer-inner{max-width:1060px; margin:0 auto; padding:2rem 1.25rem 3rem; font-size:.84rem; color:var(--ink-soft)}
+
+/* ---------- 画面が狭いとき ---------- */
+@media (max-width:860px){
+  .hero{display:block; padding-top:2.4rem}
+  .hero h1{font-size:1.7rem}
+  .emblem{width:88px; height:88px; margin-bottom:1.2rem}
+  .kouryou-hero{
+    writing-mode:horizontal-tb; text-orientation:mixed; height:auto;
+    border-right:0; border-left:2px solid var(--brass);
+    padding:0 0 0 1.1rem; margin-top:2.2rem; font-size:1.05rem; line-height:2; letter-spacing:.06em;
+  }
+  .kouryou-hero cite{margin:.7rem 0 0}
+  .masthead-inner{padding:.6rem .9rem}
+  .tabs{width:100%; justify-content:space-between}
+  .tab{padding:.5rem .4rem; font-size:.85rem; flex:1}
+  main{padding:0 .9rem 4rem}
+  ul.plain li .when{min-width:100%}
+}
+@media (prefers-reduced-motion:no-preference){
+  .panel{animation:fade .25s ease}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+}
+@media print{.masthead,.tabs,.hero-actions{display:none}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">明星学苑（府中校） 教職員組合<span>MEISEI GAKUEN STAFF UNION</span></div>
+    <nav class="tabs" role="tablist" aria-label="ページの切りかえ">
+      <button class="tab" role="tab" id="tab-open"   aria-controls="panel-open"   aria-selected="true">組合について</button>
+      <button class="tab" role="tab" id="tab-member" aria-controls="panel-member" aria-selected="false">組合員のページ<span class="lockmark">鍵</span></button>
+      <button class="tab" role="tab" id="tab-exec"   aria-controls="panel-exec"   aria-selected="false">執行委員のページ<span class="lockmark">鍵</span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- =========================================================
+     ① 組合について（合言葉なしで誰でも見られます）
+     ========================================================= -->
+<section class="panel" id="panel-open" role="tabpanel" aria-labelledby="tab-open">
+
+  <div class="hero">
+    <div class="hero-copy">
+      <img class="emblem" src="logo.png" width="118" height="118" alt="2026年 明星学苑教職員組合">
+      <h1><small>明星学苑（府中校）教職員組合</small>明星の教育は、<br>皆で守り、つなぐ。</h1>
+      <p class="lead">明星学苑（府中校）で働くすべての教職員のための労働組合です。賃金も、労働時間も、人事異動の進め方も、働く人の代表と話し合って決める。その原則を求め、積み重ね、次の世代に渡していくのが私たちの仕事です。</p>
+      <div class="hero-actions">
+        <a class="btn" href="#join">組合に入る</a>
+        <a class="btn ghost" href="#soudan">相談してみる</a>
+      </div>
+    </div>
+    <p class="kouryou-hero">私たちは、明星学苑に働く教職員の労働条件の向上と本学苑の民主化を期する。<cite>綱領 第一項</cite></p>
+  </div>
+
+  <div class="wrap">
+
+    <h2>綱領</h2>
+    <p>組合が何のためにあるのかを六つの項目で定めたものです。一九七四年の規約制定以来、変わっていません。</p>
+    <ol class="kouryou">
+      <li>私たちは、明星学苑に働く教職員の労働条件の向上と本学苑の民主化を期する。</li>
+      <li>私たちは、組合員各自のもつ民主的諸権利を尊重し、教育研究活動に励み、教育を通じて、明日のよりよい社会建設のため邁進する。</li>
+      <li>私たちは、お互いの人種・宗教・信条・性別・門地、または身分の相違によってその人を絶対に差別することなく、また、そのような差別に対しては断固排除する。</li>
+      <li>私たちは、民主教育と平和を守る。</li>
+      <li>私たちは、組合に入っていない教職員がこの組合に加入するよう積極的に努力し団結する。</li>
+      <li>私たちは、他の民主的諸団体と提携し、教育活動の活発化、および私学労働者の生活向上をめざしてたたかう。</li>
+    </ol>
+
+    <h2>規約のあらまし</h2>
+    <p>正式な条文は冊子『綱領・規約』（二〇〇六年五月印刷）に載っています。ここでは日常の仕事に関わりの深いところを抜き出しました。</p>
+
+    <details class="art">
+      <summary>だれが組合員になれるか（第三条・第八条〜第十条）</summary>
+      <div class="body">
+        <ul>
+          <li>学校法人明星学苑に働くすべての専任・非常勤・臨時および嘱託などの職員で組織します。教員だけの組合ではありません。</li>
+          <li>綱領・規約を承認すれば、だれでも組合員になれます。ただし労働組合法第二条第一項にあたる法人役員などは加入できません。</li>
+          <li>加入は所定の申込書に加盟費と組合費一か月分をそえて執行委員会へ申し込み、承認を受けます。</li>
+          <li>脱退するときは、組合員証をそえて理由を書いた脱退届を執行委員会に出します。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="art">
+      <summary>組合は何をするのか（第六条・第七条）</summary>
+      <div class="body">
+        <p>団結して綱領・運動方針・決議を実現することを目的に、次の事業を行います。</p>
+        <ul>
+          <li>教職員の身分保障、待遇ならびに労働条件の維持改善</li>
+          <li>組合の拡大</li>
+          <li>労働協約を結ぶこと</li>
+          <li>学苑の運営、および教育活動の民主化</li>
+          <li>教育労働者として必要な知識や教養を高める教育研究活動</li>
+          <li>組合員の福利厚生</li>
+          <li>他の民主的諸団体との連絡提携</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="art">
+      <summary>決め方のしくみ（第十三条〜第二十一条）</summary>
+      <div class="body">
+        <ul>
+          <li>最高の決議機関は<strong>総会</strong>で、毎年九月に開きます。組合員の三分の一以上の請求があれば臨時総会を開かなければなりません。</li>
+          <li>総会では運動方針、綱領・規約の改正、予算・決算、役員の選出とリコール、ストライキ権の確立、組合費の改正などを決めます。</li>
+          <li>綱領・規約の改正、役員の選出とリコール、ストライキ権の確立は、直接無記名投票で行います。</li>
+          <li><strong>執行委員会</strong>は総会で決めたことを実行し、日常の業務と緊急事項を処理します。表決権は一人一票です。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="art">
+      <summary>役員と専門部（第二十二条〜第二十五条）</summary>
+      <div class="body">
+        <p>役員は執行委員長・副執行委員長・書記長・副書記長・執行委員（若干名）・会計監査。任期は次期定例総会までの一か年で、再任は妨げませんが、原則として三年以上連続しての再任はできません。</p>
+        <p>専門部は、財政部／教育対策部／文化厚生部／調査部／給与対策部／組織部／公費助成部ほか。</p>
+      </div>
+    </details>
+
+    <details class="art">
+      <summary>お金のこと（第二十九条〜第三十一条）</summary>
+      <div class="body">
+        <ul>
+          <li>加盟費は一人百円。組合費は別に定め、毎月五日までに納めます。</li>
+          <li>会計年度は毎年六月一日から翌年五月三十一日まで。</li>
+          <li>会計報告は会計監査の監査を受け、組合員はいつでも財政に関する書類を見て質問できます。</li>
+          <li>慶弔・見舞・餞別は別に定める規定により支給されます（結婚・出産・傷病・災害・弔慰など）。</li>
+        </ul>
+      </div>
+    </details>
+
+    <h2>かつて結ばれた労働協約</h2>
+    <p>一九九七年三月一日、学校法人明星学苑と組合は労働協約を締結しました。組合と学苑がかつてこうした約束を交わしていたという記録としてお読みください。</p>
+
+    <table>
+      <thead><tr><th scope="col">条文</th><th scope="col">当時の定め</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">第二条</th><td>この協約は、就業規則その他すべての協定・契約に優先する。</td></tr>
+        <tr><th scope="row">第三条</th><td>人種、国籍、信条、性別、社会的身分、門地、学歴等によるいかなる差別的取扱いもしない。</td></tr>
+        <tr><th scope="row">第六条</th><td>学苑は、組合が職員の利益を代表することを認め、交渉は組合を最優先で行う。</td></tr>
+        <tr><th scope="row">第十六条</th><td>採用にあたり、方針・職種・時期・人員・募集方法等の基準について組合の了解を得る。</td></tr>
+        <tr><th scope="row">第十七条</th><td>組合員の人事異動を行おうとする場合は、事前にその条件について組合と協議する。</td></tr>
+        <tr><th scope="row">第十八条</th><td>異動は原則一か月以上前に通知。本人の意向・健康状態・家庭の事情を充分に勘案し、賃金並びに労働条件の低下を来たさない。住宅の移動を伴う場合は住宅を援助・確保する。</td></tr>
+        <tr><th scope="row">第十九条</th><td>経営上の都合による解雇または一時帰休を必要とする場合は、その基準について組合の同意を得る。</td></tr>
+        <tr><th scope="row">第二十条</th><td>職員の賃金については、組合の同意を得た上で定める賃金規程による。</td></tr>
+        <tr><th scope="row">第二十一条</th><td>労働時間、休日、休暇についても、組合の同意を得て定める規程による。</td></tr>
+        <tr><th scope="row">第二十二条</th><td>職場で解決できない苦情を迅速・公平に処理するため、労使同数の苦情処理委員会を置く。</td></tr>
+        <tr><th scope="row">第三十二条</th><td>労使協議会で決定した事項は、労働協約と同一の効力をもつ。</td></tr>
+        <tr><th scope="row">第三十五条</th><td>団体交渉の申入れを受けた場合は、原則として七日以内に応じなければならない。</td></tr>
+      </tbody>
+    </table>
+    <p class="note">『労働協約』（一九九七年三月一日施行）より抜粋。協約書の原本は組合事務所にあります。</p>
+
+    <h2>歩み</h2>
+    <p>手もとの資料で日付がはっきりしているものを並べました。空白の年の出来事をご存じの方は、ぜひ書記局までお知らせください。</p>
+    <dl class="timeline">
+      <dt>一九七四年六月十一日</dt><dd>綱領・規約を施行。現在の綱領六項はこのときのまま受け継がれています。</dd>
+      <dt>一九七七年七月一日</dt><dd>労働金庫対策委員会規定を実施。組合員の生活資金・住宅資金の相談体制をつくりました。</dd>
+      <dt>一九九三年十月一日</dt><dd>慶弔・見舞および餞別規定を施行。</dd>
+      <dt>一九九四年七月十一日</dt><dd>規約第二条・第三条を改正。</dd>
+      <dt>一九九七年三月一日</dt><dd>学校法人明星学苑と労働協約（基本協約）を締結・施行。人事・賃金・労働時間についての協議と同意のしくみが定まりました。</dd>
+      <dt>一九九九年十月十六日</dt><dd>規約第四条を改正し、東京私大教連（明星大学支部）・日本私立大学教職員組合連合への加盟を明記。</dd>
+      <dt>二〇〇六年五月二十日</dt><dd>現行の冊子『綱領・規約』を印刷。</dd>
+    </dl>
+
+    <h2>今年度の執行委員</h2>
+    <p>二〇二六年度の役員です。どの窓口に声をかければよいか分からないときは、どなたに話していただいてもかまいません。組合員でない方からのご相談も受けます。</p>
+    <table>
+      <thead><tr><th scope="col">役職</th><th scope="col">氏名</th><th scope="col">担当</th></tr></thead>
+      <tbody data-list="officers"></tbody>
+    </table>
+    <p class="note">2026年4月7日の定期総会（於：物理室）で選出・承認されました。役員の任期は次期定例総会までの一か年です（規約第二十四条）。</p>
+
+    <h2>加盟している上部団体</h2>
+    <p>この組合は単独で存在しているのではなく、私学の労働組合の全国的なつながりの中にあります（規約第四条）。他校の到達点や交渉の相場を知り、一校だけでは動かせないことを動かすための足場です。</p>
+    <ul class="plain">
+      <li><span class="when">全国</span><span><a href="https://shikyoren.sub.jp" target="_blank" rel="noopener">日本私立大学教職員組合連合（私大教連）</a><br>
+        <span class="note">私学で働く教職員の全国組織。賃金・労働条件の調査や、私学助成の拡充を求める運動を進めています。</span></span></li>
+      <li><span class="when">明星大学支部</span><span><a href="https://mu-union.com/guide/" target="_blank" rel="noopener">明星大学教職員組合</a><br>
+        <span class="note">同じ学校法人明星学苑で働く仲間の組合です。東京私大教連を通じて連携しています。</span></span></li>
+    </ul>
+
+    <h2>組合報「前進」</h2>
+    <p>学期ごとに発行しています。交渉の経過、学苑からの説明、職場の声を載せた紙面です。組合に入っていない方にも読んでいただけるよう、公開している号をここに並べました。</p>
+    <div data-list="zenshinPublic"></div>
+    <p class="note">組合員向けの号を含むすべてのバックナンバーは、組合員のページからご覧いただけます。</p>
+
+    <h2 id="join">組合に入りませんか</h2>
+    <p>組合は、だれかがどこかでやってくれているものではなく、入った人の数だけ強くなる仕組みです。賃金も、労働時間も、人事異動の進め方も、組合の同意や協議がなければ変えられない——一九九七年の労働協約には、そう書かれていました。その協約を結ぶところまで到達させたのは、歴代の組合員です。</p><p>一九七四年に最初の一歩を踏み出した人たちから、半日研修日を実現した人、人事異動の事前協議を確約させた人へと、この職場の働く条件は手渡されてきました。私たちがいま受け取っているものは、だれかが声をあげた結果です。そして私たちが守るものは、次にこの学苑へ来る人が受け取るものになります。組合に入るということは、そのバトンを受け取り、次へ渡すということでもあります。</p>
+
+    <div class="sheet">
+      <h3>入るとどうなるか</h3>
+      <ul class="plain">
+        <li><span class="when">交渉</span>賃金・一時金・労働時間などの交渉に、当事者として意見を出せます。</li>
+        <li><span class="when">情報</span>労使協議会や団体交渉で学苑が説明した内容を、組合員のページと組合報「前進」で共有します。</li>
+        <li><span class="when">相談</span>働き方・人事・ハラスメントなどの相談を、執行委員会が受けます。必要に応じて苦情処理委員会や団体交渉につなぎます。</li>
+        <li><span class="when">くらし</span>慶弔・見舞・餞別の給付、労働金庫や共済の利用ができます。</li>
+        <li><span class="when">つながり</span>東京私大教連・日本私立大学教職員組合連合を通じて、他の私学の到達点を知ることができます。</li>
+      </ul>
+      <h3>手続き</h3>
+      <p>加入申込書に、加盟費（百円）と組合費一か月分をそえて執行委員会へお出しください。申込書は書記局にあります。まず話だけ聞いてみたい、という段階でもかまいません。</p>
+      <p><a class="btn" href="mailto:meiseikumiai@gmail.com?subject=%E7%B5%84%E5%90%88%E5%8A%A0%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">加入について問い合わせる</a></p>
+      
+    </div>
+
+    <h2 id="soudan">相談窓口</h2>
+    <p>組合員でない方の相談も受けます。相談した事実そのものを含め、本人の了解なく外に出すことはありません。</p>
+    <table>
+      <thead><tr><th scope="col">窓口</th><th scope="col">連絡先</th><th scope="col">扱うこと</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">書記局</th><td>meiseikumiai@gmail.com</td><td>加入、組合費、「前進」、そのほか全般</td></tr>
+        <tr><th scope="row">執行委員長</th><td>（内線・メールを記入）</td><td>人事、解雇、重大な不利益の相談</td></tr>
+     
+      </tbody>
+    </table>
+    <p class="note">※ 連絡先はすべて仮の内容です。公開前に実際の情報に差しかえてください。</p>
+
+    <h3>フォームから相談する</h3>
+    <p>組合員でない方も使えます。返事が必要な場合は、連絡先をご記入ください。</p>
+    <div data-form="contact"></div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     ② 組合員のページ（合言葉が必要）
+     ========================================================= -->
+<section class="panel" id="panel-member" role="tabpanel" aria-labelledby="tab-member" hidden>
+  <div class="gate" data-gate="member">
+    <h2>組合員のページ</h2>
+    <p class="note">合言葉を入れてください。合言葉は「前進」の紙面と職場の組合掲示板でお知らせしています。</p>
+    <form data-gateform="member">
+      <input type="password" placeholder="合言葉" autocomplete="off" aria-label="合言葉">
+      <button class="btn" type="submit">開く</button>
+    </form>
+    <p class="msg" role="status" aria-live="polite"></p>
+  </div>
+
+  <div class="content" data-content="member" hidden>
+    <div class="paneltop">
+      <span class="who">組合員のページ</span>
+      <button class="lockbtn" data-lock="member">閉じる</button>
+    </div>
+    <div data-count="member"></div>
+    <div class="wrap">
+
+      <h2>予定表</h2>
+      <p>組合員のどなたでも予定を書きこめます。分会の集まり、学習会、アンケートの〆切など、共有したいものを入れてください。</p>
+      <div data-cal="member"></div>
+      <h3>毎年の決まった予定</h3>
+      <ul class="plain" data-list="memberSchedule"></ul>
+
+      <h2>いま取り組んでいること</h2>
+      <div data-list="topics"></div>
+
+      <h2>組合報「前進」</h2>
+      <p>最近の号です。</p>
+      <div data-list="zenshin"></div>
+
+      <details class="art">
+        <summary>期別アーカイブ（1期〜53期）</summary>
+        <div class="body">
+          <p class="note">結成の1974年が1期、今年度が53期です。号をクリックすると、その期のフォルダが開きます。</p>
+          <div style="max-height:26rem; overflow:auto">
+            <table>
+              <thead><tr><th scope="col">期</th><th scope="col">年</th><th scope="col">号</th></tr></thead>
+              <tbody data-list="terms"></tbody>
+            </table>
+          </div>
+          <p class="calbar"><a class="btn ghost" href="https://drive.google.com/drive/folders/1Eqwlvc6KtL43orf--1tbgu2u9nkQQwEj?usp=sharing" target="_blank" rel="noopener">全体のフォルダを開く</a></p>
+          <p class="note">48期・49期・52期のフォルダはまだありません。号の範囲は、フォルダに残っている号から拾ったものです。</p>
+        </div>
+      </details>
+
+      <h2>いまの組合の力</h2>
+      <div data-list="rate"></div>
+
+      <div data-list="baton"></div>
+
+      <details class="art" style="margin-top:1.6rem">
+        <summary>組合員数の移りかわり（1974年〜）</summary>
+        <div class="body">
+          <div data-list="members"></div>
+          <table>
+            <thead><tr><th scope="col">年</th><th scope="col">人数</th><th scope="col">内訳</th></tr></thead>
+            <tbody data-list="membersTable"></tbody>
+          </table>
+          <p class="note">1997〜2007年は『歴代役員一覧』の登録人数です。毎年の総会のあとに一行足していくと、推移が見えるようになります。</p>
+        </div>
+      </details>
+
+      <h2>組合の歩み（詳細）</h2>
+      <p>『明星学苑・教職員組合の生い立ち』（2008年3月13日版）をもとにした年表です。薄い字は学苑の出来事で、それ以外が組合の歩みです。</p>
+      <details class="art">
+        <summary>1923年から2008年まで</summary>
+        <div class="body">
+          <div class="chron" data-list="history"></div>
+        </div>
+      </details>
+
+      <h2>親睦会のアルバム</h2>
+      <p>懇親会や歓送迎会の写真です。写真を追加したい方は、書記局までデータをお送りください。</p>
+      <div data-list="album"></div>
+      <p class="note">写っている方から取り下げの申し出があったときは、すぐに外します。書記局までご連絡ください。</p>
+
+      <h2>歴代の役員</h2>
+      <p>一九七四年の結成以来、この組合を担ってきた人たちです。『歴代役員一覧』（二〇二三年二月改訂）から、委員長・副委員長・書記長・副書記長の四役を抜き出しました。</p>
+      <details class="art">
+        <summary>一九七四年から現在まで（五十三年分）</summary>
+        <div class="body">
+          <div style="max-height:30rem; overflow:auto">
+            <table>
+              <thead><tr><th scope="col">年度</th><th scope="col">委員長</th><th scope="col">副委員長</th><th scope="col">書記長</th><th scope="col">副書記長</th></tr></thead>
+              <tbody data-list="rekidai"></tbody>
+            </table>
+          </div>
+          <p class="note">二〇一八年度は原資料に記載がありません。二〇二四・二〇二五年度は確認でき次第うめます。ご存じの方は書記局までお知らせください。</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ③ 執行委員のページ（合言葉が必要）
+     ========================================================= -->
+<section class="panel" id="panel-exec" role="tabpanel" aria-labelledby="tab-exec" hidden>
+  <div class="gate" data-gate="exec">
+    <h2>執行委員のページ</h2>
+    <p class="note">執行委員会で共有している合言葉を入れてください。</p>
+    <form data-gateform="exec">
+      <input type="password" placeholder="合言葉" autocomplete="off" aria-label="合言葉">
+      <button class="btn" type="submit">開く</button>
+    </form>
+    <p class="msg" role="status" aria-live="polite"></p>
+  </div>
+
+  <div class="content" data-content="exec" hidden>
+    <div class="paneltop">
+      <span class="who">執行委員のページ</span>
+      <button class="lockbtn" data-lock="exec">閉じる</button>
+    </div>
+    <div data-count="exec"></div>
+    <div class="wrap">
+
+      <div class="callout warn">
+        <p><strong>取り扱いの注意</strong>　このページの鍵は簡易なもので、本当の意味の非公開ではありません。ページのもとになっているファイルは誰でも読めるため、ここに書いた文字列（パスコードなど）も外から読めます。個人が特定される相談内容、係争中の案件、氏名入りの人事情報は、ここではなく組合事務所の紙の記録か、Google側で共有相手を限定したドライブで管理してください。</p>
+      </div>
+
+      <h2>執行委員の予定表</h2>
+      <p>執行委員会、労使協議会、団体交渉の日程です。執行委員は直接書きこめます。</p>
+      <div data-cal="exec"></div>
+      <h3>手入力のメモ</h3>
+      <ul class="plain" data-list="execSchedule"></ul>
+
+      <h2>組合員への一斉連絡</h2>
+      <p>宛先とひな型を選び、必要なところを書きかえて送ります。宛先はすべてBCCに入るので、受け取った人に他の人のアドレスは見えません。</p>
+      <div class="compose">
+        <label for="c-to">宛先</label>
+        <select id="c-to"></select>
+        <p class="note" id="c-toaddr" style="margin:.35rem 0 0"></p>
+
+        <label for="c-paste">宛先をその場で指定する（上で「直接入力」を選んだとき）</label>
+        <textarea id="c-paste" style="min-height:5rem" placeholder="アドレスをコンマか改行で区切って貼りつけてください。ここに入れた内容はページには保存されません。"></textarea>
+
+        <label for="c-tpl">ひな型</label>
+        <select id="c-tpl"></select>
+
+        <label for="c-sub">件名</label>
+        <input type="text" id="c-sub">
+
+        <label for="c-body">本文</label>
+        <textarea id="c-body"></textarea>
+
+        <div class="row">
+          <button class="btn" type="button" id="c-gmail">Gmailで開く</button>
+          <button class="btn ghost" type="button" id="c-mail">メールソフトで開く</button>
+          <button class="btn ghost" type="button" id="c-copy">本文をコピー</button>
+          <span class="meter" id="c-meter"></span>
+        </div>
+        <p class="note" id="c-msg" role="status" aria-live="polite" style="margin-bottom:0"></p>
+      </div>
+      <p class="note">送信の記録は、下の受付状況の表か「前進」に残してください。同じ内容を組合掲示板にも貼ると、メールを見ない方に届きます。</p>
+
+      <h2>意見箱・問い合わせの受付状況</h2>
+      <p>意見箱と相談フォームに届いたものの扱いです。回答そのものはスプレッドシートにあります。このページには要約と対応状況だけを置いてください。</p>
+      <p class="calbar"><span data-link="responses"></span></p>
+      <table>
+        <thead><tr><th scope="col">受付</th><th scope="col">経路</th><th scope="col">氏名</th><th scope="col">内容（要約）</th><th scope="col">対応</th></tr></thead>
+        <tbody data-list="voices"></tbody>
+      </table>
+      <div class="callout">
+        <p>扱いの目安　①執行委員会で共有 → ②要求事項なら労使協議会か団交の議題に、個別の困りごとなら本人の了解を得たうえで苦情処理委員会へ → ③結果を「前進」と組合員のページに戻す。氏名は執行委員会の外には出しません。</p>
+      </div>
+
+      <h2>共有資料</h2>
+      <p>資料はすべて組合の共有ドライブにあります。下のボタンからフォルダを開いてください。個別のファイルへのリンクは、よく使うものだけ一覧に足していく形にしています。</p>
+      <p class="calbar">
+        <a class="btn" href="https://drive.google.com/drive/folders/15sS32VZ6WdAanMiTUogUcMuNIhpglJoU?usp=sharing" target="_blank" rel="noopener">共有フォルダを開く</a>
+        <span class="note">組合のGoogleアカウントか、共有されたアカウントでログインしてお使いください。</span>
+      </p>
+      <div data-list="files"></div>
+
+      <h2>試作中のツール</h2>
+      <p>執行委員だけで試している段階のものです。本格運用の前に、使い勝手と記録の扱いについて意見をください。</p>
+      <div class="sheet">
+        <h3>書記局 録音処</h3>
+        <p>会議の音声を文字起こしし、議事録の下書きまで作るツールです。労使協議会や団体交渉の記録を、聞き直しながら手で起こす手間をなくすために試しています。</p>
+        <p class="calbar">
+          <a class="btn" href="https://koouji4696-collab.github.io/mojirokuon/" target="_blank" rel="noopener">書記局 録音処を開く</a>
+          <span class="note">パスコードは執行委員会で共有しています（このページには書きません）。</span>
+        </p>
+        <p class="note">試作中のため、記録はかならず共有ドライブにも保存してください。録音するときは、その場にいる全員に録音することを伝えてください。</p>
+      </div>
+
+      <h2>労使協議会</h2>
+      <div class="callout">
+        <p>一九九七年の労働協約では、議案は原則として開催申入れと同時に相手方へ提出（第二十七条）、申入れを受けた側は原則七日以内に応じる（第二十八条）、ここで決定した事項は労働協約と同一の効力をもつ（第三十二条）と定められていました。現行の取り扱いは執行委員会で確認してください。</p>
+      </div>
+      <div data-list="roushi"></div>
+
+      <h2>団体交渉</h2>
+      <div class="callout">
+        <p>一九九七年の労働協約では、組合側の交渉委員は執行委員長または執行副委員長を含む（第三十三条）、申入れを受けた場合は原則七日以内に応じる（第三十五条）、確認書は二通作成し双方の代表者が記名押印または署名して各一通を保管する（第三十七条）と定められていました。なお団体交渉に応じる義務そのものは、協約の有無にかかわらず労働組合法第七条が定めています。</p>
+      </div>
+      <div data-list="dankou"></div>
+
+      <h2>合言葉を変えるとき</h2>
+      <p>新しい合言葉を入力すると、ファイルに書きこむための文字列が出ます。それを <code>index.html</code> の上のほうにある <code>PASS</code> の該当箇所に貼りかえて、保存・再公開してください。</p>
+      <div class="sheet">
+        <form id="hashtool" style="display:flex; gap:.5rem; flex-wrap:wrap">
+          <input type="text" id="hashin" placeholder="新しい合言葉" autocomplete="off" aria-label="新しい合言葉"
+                 style="flex:1; min-width:12rem; padding:.6rem .8rem; border:1px solid var(--rule); border-radius:2px; font-size:1rem">
+          <button class="btn" type="submit">文字列をつくる</button>
+        </form>
+        <p id="hashout" class="note" style="margin-bottom:0"></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="close" type="button" id="lb-close">閉じる</button>
+  <figure style="margin:0; display:flex; flex-direction:column; align-items:center">
+    <img id="lb-img" src="" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>明星学苑（府中校）教職員組合　本部：東京都府中市栄町一丁目一番地<br>東京私大教連（<a href="https://mu-union.com/guide/" target="_blank" rel="noopener">明星大学支部</a>）・<a href="https://shikyoren.sub.jp" target="_blank" rel="noopener">日本私立大学教職員組合連合</a> 加盟</p>
+    <p>このページの内容についてのご意見・訂正は書記局までお寄せください。</p>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================
+   １．合言葉の設定
+   ----------------------------------------------------------
+   下の文字列は合言葉そのものではなく、合言葉から計算した値です。
+   変えるときは「執行委員のページ」の一番下にある道具を使ってください。
+
+   いまの合言葉　組合員 : 90
+   　　　　　　　執行委員 : 90
+   公開前にかならず変更してください。
+   ========================================================== */
+const PASS = {
+  member: "102381de7e642d",
+  exec:   "102381de7e642d"
+};
+
+/* ==========================================================
+   ２．カレンダーの設定
+   ----------------------------------------------------------
+   Googleカレンダーを二つ作り、それぞれのカレンダーIDを下の id に
+   貼りつけてください。IDは「設定と共有」→「カレンダーの統合」の
+   中にある、メールアドレスのような文字列です。
+
+   　例： abcd1234...@group.calendar.google.com
+
+   共有の設定（ここが「誰でも書きこめる」の実体です）
+   　組合員カレンダー … 組合員のGoogleグループに「予定の変更権限」
+   　執行委員カレンダー … 執行委員のGoogleグループに「予定の変更権限」
+   さらに「予定の時間枠のみを一般公開」にしておくと、ログインして
+   いない人にも枠だけが表示され、内容は見えません。
+   ========================================================== */
+const CALENDAR = {
+  member: { id:"0d4e316d6794e2053164a3694c4a0ef6ff6340307046f0fc7b600d4c61d60b26@group.calendar.google.com", note:"組合員カレンダー" },
+  exec:   { id:"dbe898f5f82dce3618969f4e6e34f76c47b782eb107fab5f9dfce4d85cdb10f7@group.calendar.google.com", note:"執行委員カレンダー" }
+};
+
+/* ==========================================================
+   ★さがす言葉：カレンダー連動★
+   カレンダーの予定を、トップのカウントダウンに取り込む設定
+   ----------------------------------------------------------
+   取り込み方は二つあります。proxy を使うほうをおすすめします。
+
+   【A】proxy（おすすめ・カレンダーを非公開のままにできる）
+     Googleアプリスクリプトで小さな窓口を作り、そのアドレスを
+     proxy に貼ります。カレンダーは非公開のままで構いません。
+     このファイルに秘密の文字列を書かずに済みます。
+     作り方は書記局の手順書をご覧ください。
+
+   【B】key（Google Cloud のAPIキー）
+     カレンダーを一般公開にする必要があり、キーの文字列が
+     このファイルに残ります。GitHubの警告が出る原因になります。
+     proxy を使う場合は、key は空のままにしてください。
+
+   どちらも空なら、下の upcoming に手で書いた予定で動きます。
+   ========================================================== */
+const CAL_SYNC = {
+  proxy:  "https://script.google.com/macros/s/AKfycbxe5Lvwg9G4RWPsCd0b6ZD-cHwGmFBb3ZpCz6WJkJLzgeTll-oV-8XfVf8Xzs7SnJFfyw/exec",      /* 【A】 アプリスクリプトのアドレス（https://script.google.com/macros/s/.../exec） */
+  key:    "",      /* 【B】 APIキー。proxy を使うなら空のまま */
+  member: true,    /* 組合員カレンダーを取り込む */
+  exec:   true,   /* 執行委員カレンダーを取り込む */
+  months: 6        /* 何か月先まで見るか */
+};
+
+/* ==========================================================
+   ３．フォームの設定（意見箱・相談フォーム）
+   ----------------------------------------------------------
+   Googleフォームを二つ作り、[送信]→[ < > ]のタブに出てくる
+   埋め込みアドレスを embed に貼りつけてください。
+
+   　https://docs.google.com/forms/d/e/xxxxx/viewform?embedded=true
+
+   フォームの一問目に「組合員名」を必須の記述式で入れてください。
+   「メールアドレスを収集する」をオンにすると学苑アカウントが
+   自動で記録されます。返信に使うならオン、氏名だけで足りるなら
+   オフにしてください。
+
+   responses は、回答が集まるスプレッドシートのアドレスです。
+   ウェブに公開はせず、共有相手を執行委員だけに限定してください。
+   ========================================================== */
+const FORMS = {
+  /* 組合員のページの意見箱 */
+  opinion: {
+    embed:"https://docs.google.com/forms/d/e/1FAIpQLSfuNM4e7WKrQJOk6Y6Eg9uFg9l0bNIqUz5fyAgKGtpHItM0EQ/viewform?embedded=true",
+    open: "https://docs.google.com/forms/d/e/1FAIpQLSfuNM4e7WKrQJOk6Y6Eg9uFg9l0bNIqUz5fyAgKGtpHItM0EQ/viewform"
+  },
+  /* 組合について のページの相談フォーム */
+  contact: {
+    embed:"https://docs.google.com/forms/d/e/1FAIpQLSf_-wXIsgTS8GVnEli25gPDyiZ68qMIhfPKE-mAG9xSjPj04w/viewform?embedded=true",
+    open: "https://docs.google.com/forms/d/e/1FAIpQLSf_-wXIsgTS8GVnEli25gPDyiZ68qMIhfPKE-mAG9xSjPj04w/viewform"
+  },
+  /* 回答スプレッドシート（執行委員のみ） */
+  responses: {
+    url:"https://docs.google.com/spreadsheets/d/1Oj_lUIRrLm7QMuzUvFaba0W3V5JWA2LWDONMqDfQgvc/edit"
+  }
+};
+
+/* ==========================================================
+   ４．一斉連絡の宛先とひな型
+   ----------------------------------------------------------
+   ここには Googleグループなど「まとめて一つになったアドレス」だけを
+   書いてください。組合員一人ひとりのアドレスを並べて書くことは
+   絶対に避けてください。このファイルは誰でも中身を読めるため、
+   組合員名簿を公開するのと同じことになります。
+
+   一人ずつに送る必要があるときは、ページ上の「直接入力」欄に
+   その場で貼りつけて使ってください（ファイルには残りません）。
+   ========================================================== */
+const MAIL_GROUPS = [
+  { label:"全組合員",   address:"" },   /* 例 kumiai-all@googlegroups.com */
+  { label:"執行委員",   address:"" },
+  { label:"直接入力",   address:"*"  }  /* この行は消さないでください */
+];
+
+const MAIL_TEMPLATES = [
+  { label:"執行委員会の招集",
+    subject:"【組合】執行委員会のお知らせ（　月　日）",
+    body:"執行委員のみなさま\n\n下記のとおり執行委員会を開きます。\n\n　日時　　月　日（　）　時　分〜\n　場所　\n　議題　\n\n議題の追加がある方は、前日までに書記局までお知らせください。\n欠席の場合もご一報ください。\n\n明星学苑教職員組合 書記局" },
+  { label:"「前進」発行のお知らせ",
+    subject:"【組合】組合報「前進」第5302号を発行しました",
+    body:"組合員のみなさま\n\n組合報「前進」第5302号を発行しました。組合員のページからお読みいただけます。\n\n　今号の内容\n　・\n　・\n\nご意見は組合員のページの意見箱へお寄せください。\n\n明星学苑教職員組合 書記局" },
+  { label:"総会の案内",
+    subject:"【組合】定期総会のご案内（　月　日）",
+    body:"組合員のみなさま\n\n規約第十七条にもとづき、定期総会を開きます。運動方針・予算・役員を決める、一年でいちばん大事な場です。ご出席ください。\n\n　日時　　月　日（　）　時　分〜\n　場所　\n　議題　運動方針／会計報告・予算／役員の選出　ほか\n\nやむを得ず欠席される方は、委任状を　月　日までに書記局へご提出ください。\n\n明星学苑教職員組合 書記局" },
+  { label:"交渉の結果報告",
+    subject:"【組合】　月　日の団体交渉の結果について",
+    body:"組合員のみなさま\n\n　月　日に行った団体交渉の結果をお知らせします。\n\n　議題　\n　学苑の回答　\n　組合の対応　\n\n詳しい経過は次号の「前進」に掲載します。ご意見をお寄せください。\n\n明星学苑教職員組合 書記局" },
+  { label:"緊急連絡",
+    subject:"【組合・至急】",
+    body:"組合員のみなさま\n\n\n\n明星学苑教職員組合 書記局" },
+  { label:"白紙から書く", subject:"【組合】", body:"" }
+];
+
+/* ==========================================================
+   ５．ページに出す内容
+   ----------------------------------------------------------
+   ここを書きかえるだけで、予定表・執行委員一覧・「前進」の一覧・
+   議事の記録が更新できます。行を増やすときは、{ } のかたまりを
+   コンマ区切りでコピーして貼りつけてください。
+   ========================================================== */
+const DATA = {
+
+  /* ★さがす言葉：カウントダウン★ --- カウントダウンに使う予定 ---
+     date は「年-月-日T時:分」の形で書いてください（例 2026-09-18T16:30）。
+     過ぎた予定は自動で消え、次の予定に切りかわります。
+     who は "member"（組合員のページだけ）/ "exec"（執行委員のページだけ）
+     / "all"（両方）のいずれか。 */
+  upcoming: [
+    { date:"2026-11-11T16:30", title:"執行委員会",   where:"会議室",   who:"exec"   },
+    { date:"2026-11-18T15:30", title:"労使協議会",   where:"（場所）", who:"exec"   },
+    { date:"2026-11-06T16:30", title:"「前進」原稿しめきり", where:"", who:"all"    },
+    { date:"2026-12-09T16:00", title:"団体交渉",     where:"（場所）", who:"exec"   }
+  ],
+
+  /* ★さがす言葉：毎年の予定★ */
+  memberSchedule: [
+    { when:"○月",     what:"定期総会（規約第十七条）。運動方針・予算・役員を決めます。" },
+    { when:"随時",     what:"執行委員会。議題のある方は前週までに書記局へ。" },
+    { when:"学期ごと？", what:"組合報「前進」発行。" },
+    { when:"　",       what:"※ 実際の日付が決まったら、この行を書きかえてください。" }
+  ],
+
+  /* ★さがす言葉：取り組み★ --- 組合員のページ：いま取り組んでいること --- */
+  topics: [
+    { title:"2026年度 春闘要求書",
+      status:"交渉終了",
+      body:"組合員アンケートにもとづき、組合員の総意として2026年5月17日に落合一泰理事長あてへ提出しました。柱は五つです。①賃金改善および物価高騰への対応　②労働時間の適正化と職場環境の改善　③部活動顧問業務の負担軽減　④人事考課制度の撤廃と民主化　⑤福利厚生・育児介護支援。" },
+    { title:"人事考課制度の撤廃と民主化",
+      status:"継続",
+      body:"過去に撤回された経緯のある人事考課制度の再導入に対し、強い懸念が多数寄せられています。労働協約第二十条（賃金は組合の同意を得た上で定める賃金規程による）を根拠に、組合として対応しています。" },
+    { title:"変形労働時間制の検証",
+      status:"調査中",
+      body:"導入後の手続きの煩雑さや、退勤時刻の実態について声が寄せられています。実態を把握し、労使協議会で取り上げます。" },
+    { title:"組合活動の「見える化」",
+      status:"進行中",
+      body:"アンケートでいただいた「広報活動を活発にする」「職員室の掲示で透明性を高める」「組合員で集まる機会を増やす」というご提案を受け、組合報とこのホームページで継続的に発信していきます。" }
+  ],
+
+  /* ★さがす言葉：前進★ --- 組合報「前進」（public:true の号は、組合について のページにも出ます）--- */
+  zenshin: [
+    { no:"最新号 No.5302", date:"2026年10月8日", title:"拡大号　春闘交渉の成果をご報告します",
+      url:"https://drive.google.com/file/d/1xxRo-68Ru_PFNfcqKbsIdtJwGB6pVTUz/view?usp=sharing", public:true,
+      summary:"労使協議会・団体交渉の報告と、組合員アンケート" },
+    { no:"前号 No.5301",   date:"2026年6月17日", title:"新執行部スタート",
+      url:"https://drive.google.com/file/d/1CQ-TwfZU7CNu2hgH0Ogws4olQunkCK8T/view?usp=sharing", public:true,
+      summary:"2026年度の執行委員と、春闘要求書の五項目" }
+  ],
+
+  /* ★さがす言葉：意見箱★ --- 意見箱に届いた声 ---
+     show:true にすると組合員のページにも出ます。
+     credit:true のときだけ、組合員のページに氏名が出ます。
+     ご本人の了解がない場合は credit:false のままにしてください。
+     state は "受付" / "対応中" / "回答済" のいずれか。 */
+  voices: [
+    { date:"　月　日", via:"意見箱", name:"（氏名）", state:"対応中", show:true, credit:false,
+      body:"（届いた意見の要約）",
+      reply:"（執行委員会での扱いと、いまの状況）" },
+    { date:"　月　日", via:"相談フォーム", name:"（氏名）", state:"受付", show:false, credit:false,
+      body:"（届いた内容の要約）",
+      reply:"（対応の方針）" }
+  ],
+
+
+  /* ★さがす言葉：歴代★ --- 歴代役員一覧（組合員のページ）---
+     y=年度 a=委員長 b=副委員長 c=書記長 d=副書記長
+     新しい年度は、この一覧のいちばん下に一行足してください。 */
+  rekidai: [
+    { y:"1974(1期)", a:"駒ヶ嶺泰秀", b:"浅海 孝夫", c:"伊藤 高正", d:"熊沢 汎" },
+    { y:"1975(2期)", a:"伊藤 高正", b:"加藤 明", c:"浅海 孝夫", d:"宮下 上" },
+    { y:"1976(3期)", a:"浅海 孝夫", b:"駒ヶ嶺泰秀", c:"伊藤 高正", d:"平山 正親" },
+    { y:"1977(4期)", a:"加藤 明", b:"浅海 孝夫", c:"平山 正親", d:"伊藤 高正" },
+    { y:"1978(5期)", a:"伊藤 高正", b:"谷口 圭一", c:"浅海 孝夫", d:"平山 正親" },
+    { y:"1979(6期)", a:"伊藤 高正", b:"稲村 清美", c:"平山 正親", d:"宮下 上" },
+    { y:"1980(7期)", a:"伊藤 高正", b:"加藤 明", c:"平山 正親", d:"村井 直人" },
+    { y:"1981(8期)", a:"佐藤 孝一", b:"金子 得三", c:"平山 正親", d:"福山 一明" },
+    { y:"1982(9期)", a:"北村 健治", b:"平山 正親", c:"伊藤 高正", d:"小林 勝" },
+    { y:"1983(10期)", a:"斉藤 勝", b:"加藤 明", c:"金子 得三", d:"稲村 清美" },
+    { y:"1984(11期)", a:"斉藤 勝", b:"谷口 圭一", c:"浅海 孝夫", d:"福山 一明" },
+    { y:"1985(12期)", a:"西川 正夫", b:"馬場 義則", c:"浅海 孝夫", d:"小野田 修" },
+    { y:"1986(13期)", a:"金子 得三", b:"小林 勝", c:"宮下 上", d:"佐藤 孝一" },
+    { y:"1987(14期)", a:"片山 治夫", b:"伊藤 高正", c:"浅海 孝夫", d:"平山 正親" },
+    { y:"1988(15期)", a:"片山 治夫", b:"小宮 平吉", c:"西川 正夫", d:"小林 勝" },
+    { y:"1989(16期)", a:"福山 一明", b:"馬場 義則", c:"北村 健治", d:"駒ヶ嶺泰秀" },
+    { y:"1990(17期)", a:"片山 治夫", b:"稲村 清美", c:"西川 敦", d:"宮下 上" },
+    { y:"1991(18期)", a:"西川 正夫", b:"谷口 圭一", c:"中三川幸也", d:"伊藤 高正" },
+    { y:"1992(19期)", a:"斉藤 勝", b:"荒牧 節子", c:"松下 明良", d:"鮫島 満" },
+    { y:"1993(20期)", a:"平山 正親", b:"駒ヶ嶺泰秀", c:"宮下 上", d:"菅野 信雄" },
+    { y:"1994(21期)", a:"平山 正親", b:"伊藤 高正", c:"福山 一明", d:"駒ヶ嶺泰秀" },
+    { y:"1995(22期)", a:"片山 治夫", b:"伊藤 高正", c:"松下 明良", d:"上杉 剛" },
+    { y:"1996(23期)", a:"福山 一明", b:"北村 健治", c:"平山 正親", d:"荒牧 節子" },
+    { y:"1997(24期)", a:"村井 直人", b:"斉藤 勝", c:"阿部 敬一", d:"吉本加寿子" },
+    { y:"1998(25期)", a:"伊藤 高正", b:"黒石 宏子", c:"平山 正親", d:"本田 康夫" },
+    { y:"1999(26期)", a:"伊藤 高正", b:"平山 正親", c:"本田 康夫", d:"飯島 崇史" },
+    { y:"2000(27期)", a:"片山 治夫", b:"荒牧 節子", c:"宮下 上", d:"飯島 崇史" },
+    { y:"2001(28期)", a:"平山 直江", b:"片山 治夫", c:"粟本 澄江", d:"望月 雅晴" },
+    { y:"2002(29期)", a:"中三川幸也", b:"馬場 義則", c:"村井 直人", d:"駒ヶ嶺泰秀" },
+    { y:"2003(30期)", a:"伊藤 高正", b:"斉藤 勝", c:"丸岡 邦子", d:"上岡 司" },
+    { y:"2004(31期)", a:"高井 文夫", b:"比留間由美子", c:"大島 洋子", d:"菅野 友博" },
+    { y:"2005(32期)", a:"本田 康男", b:"望月 雅晴", c:"北村 健治", d:"廣木 孝司" },
+    { y:"2006 前(33期)", a:"西川 敦", b:"望月 雅晴", c:"有賀 郁夫", d:"北村 健治" },
+    { y:"2006 後(34期)", a:"西川 敦", b:"清水 洋一", c:"有賀 郁夫", d:"菱沼 良平" },
+    { y:"2007(35期)", a:"西川 敦", b:"倉田 宏一", c:"中村 賀一", d:"有賀 郁夫" },
+    { y:"2008(36期)", a:"高井 文夫", b:"上岡 司", c:"菅野 友博", d:"中三川幸也" },
+    { y:"2009(37期)", a:"乗附 尚史", b:"上野 恵理", c:"丸岡 邦子", d:"宮下 上" },
+    { y:"2010(38期)", a:"乗附 尚史", b:"望月 雅晴", c:"廣木 孝司", d:"稲葉 公俊" },
+    { y:"2011(39期)", a:"倉田 宏一", b:"小林 茂樹", c:"有賀 郁夫", d:"菅野 友博" },
+    { y:"2012(40期)", a:"上岡 司", b:"倉田 宏一", c:"西川 敦", d:"津村 麻里子" },
+    { y:"2013(41期)", a:"辻 祐二", b:"上野 恵理", c:"清水 洋一", d:"橋本 忍" },
+    { y:"2014(42期)", a:"三村 真幸", b:"望月 雅晴", c:"廣木 孝司", d:"佐藤 将鷹" },
+    { y:"2015(43期)", a:"三村 真幸", b:"丸岡 邦子", c:"小林 茂樹", d:"近藤 正和" },
+    { y:"2016(44期)", a:"丸岡 邦子", b:"倉田 宏一", c:"有賀 郁夫", d:"上岡 司" },
+    { y:"2017(45期)", a:"有賀 郁夫", b:"菅野 友博", c:"辻 祐二", d:"倉田 宏一" },
+    { y:"2018-19(46期)", a:"原 健", b:"望月 雅晴", c:"川辺 一", d:"橋本 忍" },
+    { y:"2020(47期)", a:"原 健", b:"三村 真幸", c:"津村 麻里子", d:"橋本 忍" },
+    { y:"2021(48期)", a:"小林 茂樹", b:"三村 真幸", c:"丸岡 邦子", d:"有賀 郁夫" },
+    { y:"2022(49期)", a:"小林 茂樹", b:"三村 真幸", c:"有賀 郁夫", d:"倉田 宏一" },
+    { y:"2023(50期)", a:"川辺 一", b:"三村 真幸", c:"新井 貴士", d:"有賀 郁夫" },
+    { y:"2024(51期)", a:"（空欄）", b:"（空欄）", c:"（空欄）", d:"（空欄）" },
+    { y:"2025(52期)", a:"（空欄）", b:"（空欄）", c:"（空欄）", d:"（空欄）" },
+    { y:"2026(53期)", a:"小林 茂樹", b:"加藤 寛章", c:"武山 新也", d:"八幡 幸司" }
+  ],
+
+  /* ★さがす言葉：歩み★ --- 組合員のページ：組合の歩み（詳細）---
+     『明星学苑・教職員組合の生い立ち』（2008年3月13日版）より。
+     { era:"…" } は見出しの行です。
+     k:"key" を付けると太字、k:"ctx" を付けると学苑・社会の出来事として薄く出ます。
+     ★個人名は載せない方針です。原資料にある氏名は人数・役職に置きかえてあります。 */
+  history: [
+    { era:"前史 ― 組合ができるまで（1923〜1973）" },
+    { y:"1923（T12）", k:"ctx", t:"5月　明星実務学校 創立。" },
+    { y:"1927（S02）", k:"ctx", t:"2月21日　財団法人明星中学校に改組。" },
+    { y:"1947（S22）", k:"ctx", t:"4月1日　学制改革により、五年制から三年制の新制明星中学校となる。" },
+    { y:"1948（S23）", k:"ctx", t:"5月13日　明星高等学校 開校式を挙行。" },
+    { y:"1951（S26）", k:"ctx", t:"3月15日　私立学校法により、財団法人明星中学校を学校法人明星学苑に組織変更。" },
+    { y:"1954（S29）", k:"ctx", t:"4月　明星中学校高等学校に女子部を開設。" },
+    { y:"1964（S39）", k:"ctx", t:"4月1日　明星大学理工学部を開学。" },
+    { y:"1973（S48）", k:"ctx", t:"11月10日　明星学苑創立50周年記念式典。" },
+
+    { era:"結成 ― 一年目にすべてが動いた（1974）" },
+    { y:"1974（S49）", k:"key", t:"6月11日　<strong>結成大会</strong>。翌12日、理事長に通告。事務職員も十名以上が加入したが、まもなく脱退。" },
+    { y:"", k:"key", t:"6月14日　機関紙「前進」第1号を発行。" },
+    { y:"", t:"6月22日　第1回総会を開催。6月29日　第1回団体交渉が実現。" },
+    { y:"", t:"7月9日　立川労政事務所に相談。7月13日　結成祝賀パーティ。7月18日　労政事務所から団交について助言を受ける。" },
+
+    { era:"地歩を固める（1975〜1983）" },
+    { y:"1975（S50）", t:"4月　定昇込47％アップ。理事長代行（学苑主事）登場。初めて公費助成の署名運動に取り組む。" },
+    { y:"", t:"9月　労金活動説明会。労働金庫に加盟し、17名が貯金活動を始める。" },
+    { y:"1976（S51）", t:"4月　定昇込16.4アップ。7月　労金活動21名となる。" },
+    { y:"1977（S52）", t:"4月　定昇込10.15アップ。7月　労金対策委員会が発足し、規程を承認。11月　第1回労金対策委員会。" },
+    { y:"1978（S53）", t:"教職員3名が加盟。職場教研4回。4月　定昇込9.29＋5,600円アップ。5月　労金活動30名となるが、7月から文化厚生部内の活動とする。日共済に加盟、総合共済25名。" },
+    { y:"1979（S54）", t:"6月11日　定昇込12.09アップ。労金への出資金を6万円に増額、貯金36名・融資6件。9月　執行委員会交替。総合共済31名。研修日について内部アンケートや外部情報を積み重ね、実現へ前進。" },
+    { y:"1980（S55）", t:"6月　教職員3名が加盟。6月24日　定昇込9.88アップ。7月　労金貯金40名。" },
+    { y:"1981（S56）", t:"12月1日　年末一時金3.4＋10,000で妥結。教研5回実施。" },
+    { y:"1982（S57）", t:"3月17日　年度末一時金0.55＋α、試験手当0.11＋αで妥結。総合共済34名。6月17日　定昇込8.28アップ、夏季一時金2.13＋10,000。9月22日　次年度の飛び給是正を確認。" },
+    { y:"1983（S58）", k:"key", t:"3月11日　<strong>半日研修日を暫定実施</strong>。6月　教職員1名が加盟。教研3回。総合共済35名、労金貯金35名。7月1日　定昇込5.1アップ（一時金に家族手当を含むことを条件）。" },
+
+    { era:"ひろがりと試練（1986〜1996）" },
+    { y:"1986（S61）", t:"中高教員3名が加盟。" },
+    { y:"1987（S62）", t:"3月　明星大学地位保全仮処分事件（自主解決）。" },
+    { y:"1989（H01）", t:"12月15日　児玉九十氏 逝去。全私教共済に加盟し、約40名が移籍加入。" },
+    { y:"1990（H02）", t:"労働基準法の改正により、事務職の週休二日制が始まる。" },
+    { y:"1992（H04）", t:"5月17日〜27日　人事をめぐる争議が起こる。中高教員3名が加盟。" },
+    { y:"1993（H05）", k:"key", t:"10月2日　創立70周年記念式典。育児休業について法令準拠を実施。この争議の後処理に伴い、<strong>人事異動の公平かつ公正化</strong>を要求し、校長出席の団交を要求・確認。経歴換算を一部是正、諸手当・年末・年度末一時金をアップ。" },
+    { y:"1994（H06）", k:"key", t:"9月　<strong>明星大学支部を結成</strong>（大学教職員、約50〜55名）。賃金5.32％アップ（私教連1位）。経歴換算是正制度が妥結。9月26日　定期総会を開催（大学支部を含め、多摩地区最大の組合となる）。" },
+    { y:"1995（H07）", t:"3月　中高教員1名が加盟。規程専門委員会を設置。" },
+    { y:"1996（H08）", t:"中高教員2名、事務職員1名が加盟。府中校に組合掲示板を確保。9月　東京私教連第32回定期議案書に学苑の状況が掲載される。" },
+
+    { era:"労働協約の締結（1997〜2003）" },
+    { y:"1997（H09）", k:"key", t:"2月　<strong>労働協約を締結</strong>。先の争議が最終解決。5月　第1回労使協議会を開催し、以後3回開催。事務職員1名と中高教員10名が加盟。9月12日　学苑理事会・評議員会名簿を提出。" },
+    { y:"1998（H10）", t:"中高教員1名、事務職員1名が加盟。6月23日　自動車通勤者互助会を設立。組合員1名が殉職。事務職員8名が加盟。" },
+    { y:"1999（H11）", t:"10月　明星大学支部が私大教連に加盟。再開発・共学問題について拡大職員会議を開催。事務職員の土曜休暇制度を導入。三六協定の締結に向けて合意。" },
+    { y:"2000（H12）", k:"key", t:"3月　事務職員の雇用保険加入。<strong>人事異動には事前協議を確約</strong>。中高教員1名が加盟。" },
+    { y:"2001（H13）", t:"3月　組合費を14か月分から12か月分に減額。雇用保険加入（本人希望）・介護休業を導入。規程委員会が就業規則の一部について意見書を提出。事務職員の適性配置転換などを要求・妥結。" },
+    { y:"2002（H14）", t:"1月25日　勉強会「共学化での経験」（昭和第一高校の方を講師に招く）。7月　明星学苑育児休暇・介護休暇規程が施行。中高教員1名、事務員1名が加盟。入試手当は従来どおり全教職員を対象に支給。早期選択定年制（案）が提出される。" },
+    { y:"2003（H15）", k:"key", t:"3月5日　勉強会「財政状況分析学習会」（私教連委員長を講師に招く）。初代執行委員長が退職。6月　<strong>組合結成30年</strong>。規程委員会が就業規則の検討・協議を進め、意見書を提出。" },
+
+    { era:"もっとも大きかった頃から現在へ（2004〜）" },
+    { y:"2004（H16）", k:"key", t:"6月　中高教員が加盟。9月　中学高校の新校舎が完成・移転。<strong>組合員が最多の64名となる</strong>。" },
+    { y:"2005（H17）", t:"4月1日　明星学苑規程集を発行、教職員選択定年制度規程が施行。6月　中高教員6名が加盟。11月　中高教員1名が加盟、5名が脱退。12月　懲戒問題について法律相談を受ける。" },
+    { y:"2006（H18）", t:"3月　選択定年制度により中高で6名が退職。5月　私教連に財政分析を依頼。選択定年制度チャレンジ割増金（期限付き）制度が施行。6月　中高教員5名が加入。9月　学苑報に2005年度決算報告が掲載される。" },
+    { y:"2007（H19）", t:"3月　選択定年制度により中高で4名が退職。4月　明星中学高等学校と改名。中高の校務組織（教務・生徒指導・入学広報・進路）と学校統合事務組織が改編される。" },
+    { y:"2008（H20）", t:"2月20日　児玉記念講堂 完成披露公演。3月　選択定年制度の利用者12名が退職。" },
+    { y:"　", k:"ctx", t:"※ 原資料『明星学苑・教職員組合の生い立ち』はここまでです。2009年以降をご存じの方は、書記局までお知らせください。" }
+  ],
+
+  /* ★さがす言葉：期一覧★ --- 組合員のページ：「前進」期別一覧 ---
+     k=期　y=年　f=共有ドライブのフォルダID
+     sg=書記長　fsg=副書記長　c=その期の号数　r=号の範囲
+     新しい期は、この一覧のいちばん下に一行足してください。 */
+  zenshinTerms: [
+    { k:"1", y:"1974", f:"179vYmFyFrA5Z_2vlF9hYFsW1CNAEBm8m", sg:"伊藤 高正", fsg:"熊沢 汎", c:8, r:"No.1 〜 No.9" },
+    { k:"2", y:"1975", f:"1zSd4Hrwyhgvq-AzVftemy_itnQ-mfCWO", sg:"浅海 孝夫", fsg:"宮下 上", c:46, r:"No.51 〜 No.105" },
+    { k:"3", y:"1976", f:"1Hj3HXeW1W8NbYwEoRL6Q-vRLHJv3Qmtn", sg:"伊藤 高正", fsg:"平山 正親", c:53, r:"No.107 〜 No.175" },
+    { k:"4", y:"1977", f:"1-o5eh4FOpqhYuTWJa7CeVFJSg9CXYGnA", sg:"平山 正親", fsg:"伊藤 高正", c:12, r:"No.177 〜 No.209" },
+    { k:"5", y:"1978", f:"1MhR0mNu-7ceFLMXyyBwbldkGVLeWYPbV", sg:"浅海 孝夫", fsg:"平山 正親", c:67, r:"No.210 〜 No.281" },
+    { k:"6", y:"1979", f:"1aiTDuauq-Ne7SQhJkq2ARlzbGKe2NNyA", sg:"平山 正親", fsg:"宮下 上", c:19, r:"No.285-1 〜 No.316" },
+    { k:"7", y:"1980", f:"152XG-bKigCoEmnlEFxkeMvCYlbbnvoZO", sg:"平山 正親", fsg:"村井 直人", c:15, r:"No.318 〜 No.341" },
+    { k:"8", y:"1981", f:"1E-jEiB4WrUZt1242kaYERlwXPz0CRKX4", sg:"平山 正親", fsg:"福山 一明", c:0, r:"" },
+    { k:"9", y:"1982", f:"1-eNxJa-Jiv9gwupiXCjxsI4FlilSwO9T", sg:"伊藤 高正", fsg:"小林 勝", c:42, r:"No.82-2 〜 No.82-48" },
+    { k:"10", y:"1983", f:"1VKUU6yaoeEt-wG6XV1WyEADGCm8NP72d", sg:"金子 得三", fsg:"稲村 清美", c:50, r:"No.83-1 〜 No.83" },
+    { k:"11", y:"1984", f:"1I-ZUALM-Ro5f9BWddCR8Xl396jMMI9C2", sg:"浅海 孝夫", fsg:"福山 一明", c:37, r:"No.84-01 〜 No.84-39" },
+    { k:"12", y:"1985", f:"1Z9YZ0ReXCsGl5Q4ayKTvb8ONS47sf5OS", sg:"浅海 孝夫", fsg:"小野田 修", c:19, r:"No.85-01 〜 No.85" },
+    { k:"13", y:"1986", f:"1b4KW58oCLmyC0BGL1wgvUAgmG-30zhwW", sg:"宮下 上", fsg:"佐藤 孝一", c:52, r:"No.86-01 〜 No.86-51" },
+    { k:"14", y:"1987", f:"1MD4ruk_6qEqIwAuIuT2paa-2KqSrFqn0", sg:"浅海 孝夫", fsg:"平山 正親", c:62, r:"No.87-01 〜 No.87-63" },
+    { k:"15", y:"1988", f:"1cUu5o0jCNQernevJdztJvbBSonC29X7w", sg:"西川 正夫", fsg:"小林 勝", c:66, r:"No.1601 〜 No.1666" },
+    { k:"16", y:"1989", f:"1ossG7JTZFhUqrivU-NH-4OPEwxlU6aJH", sg:"北村 健治", fsg:"駒ヶ嶺泰秀", c:14, r:"No.1704 〜 No.1738" },
+    { k:"17", y:"1990", f:"1__Xfv9Pj_lZKbKXo06Epz4Quac0WaFFw", sg:"西川 敦", fsg:"宮下 上", c:7, r:"No.1804 〜 No.1817" },
+    { k:"18", y:"1991", f:"1XpbxfeWyNZ18crmM-iGx_PdBWr4OXtFk", sg:"中三川幸也", fsg:"伊藤 高正", c:11, r:"No.1901 〜 No.1930" },
+    { k:"19", y:"1992", f:"181tdu2FFRf2USBdF3iSPr-ZlcQ8-xYn_", sg:"松下 明良", fsg:"鮫島 満", c:10, r:"No.2005 〜 No.2021" },
+    { k:"20", y:"1993", f:"1mGX4a3udxvLZWw1pdwptxg4D9Jky6q0F", sg:"宮下 上", fsg:"菅野 信雄", c:63, r:"No.2101 〜 No.2164" },
+    { k:"21", y:"1994", f:"1GcrX29-_hrnOzB-3jFsEEdf65mknnqMl", sg:"福山 一明", fsg:"駒ヶ嶺泰秀", c:41, r:"No.2165 〜 No.2148" },
+    { k:"22", y:"1995", f:"1Zbv4QbVw8ldUUzfFAC1KxxT6z5-KAphX", sg:"松下 明良", fsg:"上杉 剛", c:13, r:"No.2203 〜 No.2223" },
+    { k:"23", y:"1996", f:"1ktod_HiuKg5_44LXFl5nr0QdTQ7mJZ3y", sg:"平山 正親", fsg:"荒牧 節子", c:30, r:"No.2301 〜 No.2352" },
+    { k:"24", y:"1997", f:"1rQgHsdgteJYAMoDbIF14xFKYbyS6RC7x", sg:"阿部 敬一", fsg:"吉本加寿子", c:17, r:"No.2401 〜 No.2428" },
+    { k:"25", y:"1998", f:"1OJfpvbuOreoNMAeP6UeqY8qyL1rL2dcX", sg:"平山 正親", fsg:"本田 康夫", c:3, r:"No.2501 〜 No.2533" },
+    { k:"26", y:"1999", f:"1BjGtUC_sKHpZUQIHuWQ3MiLPRky4ryEA", sg:"本田 康夫", fsg:"飯島 崇史", c:1, r:"No.2619" },
+    { k:"27", y:"2000", f:"16cKe3BZlbtMDnL3Iv2wfIHz5fZEUabWN", sg:"宮下 上", fsg:"飯島 崇史", c:1, r:"No.2713-1" },
+    { k:"28", y:"2001", f:"1COqvQLHr0l-_gW2LwQfq454PmqDNw_RO", sg:"粟本 澄江", fsg:"望月 雅晴", c:32, r:"No.2801 〜 No.2834" },
+    { k:"29", y:"2002", f:"1FVD_vklW7lCwDY8XreWrCWBtoZhdczks", sg:"村井 直人", fsg:"駒ヶ嶺泰秀", c:25, r:"No.2901 〜 No.2929-2" },
+    { k:"30", y:"2003", f:"1mixaeuGc5LGSDmHr2f1YNAcsSR-lb-XZ", sg:"丸岡 邦子", fsg:"上岡 司", c:28, r:"No.3001-1 〜 No.3029-4" },
+    { k:"31", y:"2004", f:"1j0ubpjL-_nKusb2yHmja6K7yUcP5zqZj", sg:"大島 洋子", fsg:"菅野 友博", c:16, r:"No.3101-1 〜 No.3126" },
+    { k:"32", y:"2005", f:"1qNCcgrddaG8sFGbbdPQztsNT-kcC7AF7", sg:"北村 健治", fsg:"廣木 孝司", c:28, r:"No.3201 〜 No.3243-1" },
+    { k:"33・34", y:"2006", f:"1LKrkCUEwEMQTPRmblXDMXgQiJL4OPUG1", sg:"有賀 郁夫", fsg:"北村 健治", c:36, r:"No.3301-1 〜 No.3326-2" },
+    { k:"35", y:"2007", f:"1uRNRkaHH39-e0wSuFqTv0Wo3jpHdmBps", sg:"中村 賀一", fsg:"有賀 郁夫", c:0, r:"" },
+    { k:"36", y:"2008", f:"1-645oWjUPeSBIT-jpab-eB5ZOUVlMXsK", sg:"", fsg:"", c:0, r:"" },
+    { k:"37", y:"2009", f:"1RZ1A0-Z4oZ-CgrDfGbCTEEx90OedtXFs", sg:"丸岡 邦子", fsg:"", c:0, r:"" },
+    { k:"38", y:"2010", f:"1r_qKrxEXmNzchd5eO-qm0qGFf_IU2O3l", sg:"廣木 孝司", fsg:"", c:0, r:"" },
+    { k:"39", y:"2011", f:"1BZhJmo_HNPStNpJ4vE3RDXxduwWzTf50", sg:"有賀 郁夫", fsg:"菅野 友博", c:0, r:"" },
+    { k:"40", y:"2012", f:"1qhxhOLY1CVxporh6FDRYRTq7qjjjkbOC", sg:"西川 敦", fsg:"津村 麻里子", c:0, r:"" },
+    { k:"41", y:"2013", f:"1E_GyrM_x6_TTxBlqPowRKLnkt5nVdLvR", sg:"清水 洋一", fsg:"橋本 忍", c:0, r:"" },
+    { k:"42", y:"2014", f:"1moLjAUrGn2qRoRB8J7j7avMQ_jkXViHa", sg:"廣木 孝司", fsg:"佐藤 将鷹", c:0, r:"" },
+    { k:"43", y:"2016〜2017", f:"1-OIZofZGG6WpRW_LegHImT4vP0CsT0Qe", sg:"", fsg:"", c:0, r:"" },
+    { k:"44", y:"2017〜2018", f:"1xm_WR8CoKFIdfIzpi-qR230nv3G3c9d-", sg:"", fsg:"", c:0, r:"" },
+    { k:"45", y:"2019〜2020", f:"1SEbJohrw3sBMuA9w5f0wox6waOT2q5l6", sg:"", fsg:"", c:0, r:"" },
+    { k:"46", y:"2020〜2021", f:"1jTDUESYRILBb33BYnpjpYHsD7xN1JleD", sg:"", fsg:"", c:0, r:"" },
+    { k:"47", y:"2021〜2022", f:"1fZbTN9rw2hGTCwMVsfeGndNS5fWdCE0k", sg:"", fsg:"", c:0, r:"" },
+    { k:"50", y:"2024〜2025", f:"1_72Ia1xj-H3hQAU02pYOIg9jHULf5rSZ", sg:"", fsg:"", c:0, r:"" },
+    { k:"51", y:"2025〜2026", f:"1l0AfYhH_l11FGVqwruKDyftLNXgYrx9F", sg:"", fsg:"", c:0, r:"" },
+    { k:"53", y:"2026", f:"1ngOFyCDb3ajvCaJ7qCeXmJ0viNovr3x1", sg:"武山 新也", fsg:"八幡 幸司", c:2, r:"No.5301 〜 No.5302" }
+  ],
+
+  /* ★さがす言葉：組織率★ --- 組合員のページ：いまの組合の力 ---
+     members に組合員数、base に母数（いっしょに働く教員の数）を書きます。
+     check:true を付けると母数に「要確認」の印が出ます。確かめられたら false に。 */
+  density: {
+    year: "2026年度",
+    members: 31,
+    base: 121,
+    baseLabel: "専任教諭＋常勤講師",
+    baseCheck: false,
+    alt: { label:"専任教諭のみ", n:80, check:true },
+    lead: "ひとりで学苑に意見を言うことはできません。けれども三十一人が集まれば、学苑は交渉の席に着かなければなりません。労働組合法が定める団体交渉権です。",
+    foot: "組合には専任・常勤・非常勤・臨時・嘱託のすべての職員が加入できます（規約第三条）。事務職員の方も組合員です。"
+  },
+
+  /* ★さがす言葉：バトン★ --- 組合員のページ：受け継いできたもの ---
+     legs は中継点です。年と、その年に受け取ったものを書きます。
+     now:true を付けた区間が、いまの走者として塗られます。 */
+  baton: {
+    title: "もうひとつの力 ― 受け継いできたもの",
+    lede: "組合の力は、いま集まっている人数だけではありません。五十二年のあいだ、この職場で働いた人たちが交渉し、確認し、文書に残してきたことの積み重ねが、そのまま私たちの足もとにあります。",
+    legs: [
+      { y:"1974年", w:"結成。六月十四日に「組合ニュース」第1号。" },
+      { y:"1983年", w:"半日研修日を実現。" },
+      { y:"1993年", w:"人事異動の公平・公正化を要求し、確認。" },
+      { y:"1997年", w:"労働協約を締結。賃金も労働時間も協議事項に。" },
+      { y:"2000年", w:"人事異動の事前協議を確約。" },
+      { y:"2026年", w:"53期。前進は第5302号を数えます。", now:true }
+    ],
+    close: "いま当たり前に受け取っている環境は、だれかが声をあげ、交渉し、積み上げてきたものです。そして私たちがいま守るものは、次にこの職場へ来る人が受け取るものになります。組合に入るということは、そのバトンを受け取り、次へ渡すということでもあります。"
+  },
+
+  /* ★さがす言葉：組合員数★ --- 組合員のページ：組合員数の推移 ---
+     1997〜2007年は『歴代役員一覧』の登録人数、2004・2006年の（　）は
+     『生い立ち』に載っている別の集計です。
+     total に人数を書くと棒が出ます。null にすると「記録なし」になります。 */
+  members: [
+    { y:"1974（結成）", total:null, breakdown:"教職員と事務職員十数名で結成。事務職員はまもなく脱退。",
+      note:"人数の記録が残っていません" },
+    { y:"1997", total:54, breakdown:"", note:"労働協約を締結した年" },
+    { y:"1998", total:54, breakdown:"", note:"" },
+    { y:"1999", total:54, breakdown:"", note:"" },
+    { y:"2000", total:59, breakdown:"", note:"人事異動の事前協議を確約" },
+    { y:"2001", total:61, breakdown:"", note:"" },
+    { y:"2002", total:63, breakdown:"", note:"" },
+    { y:"2003", total:63, breakdown:"", note:"組合結成30年" },
+    { y:"2004", total:65, breakdown:"事務職9／中学11／高女15／高男10＋7＋12",
+      note:"最多。『生い立ち』では64名" },
+    { y:"2005", total:61, breakdown:"", note:"" },
+    { y:"2006", total:56, breakdown:"事務職8／中学12／高Ⅰ12／高Ⅱ9／高Ⅲ7／学年外13",
+      note:"『生い立ち』では61名" },
+    { y:"2007", total:54, breakdown:"事務職7／中学12／高Ⅰ5／高Ⅱ9／高Ⅲ9／学年外12", note:"" },
+    { y:"2026", total:31, breakdown:"", note:"専任教諭＋常勤講師121名の約26％" }
+  ],
+
+  /* ★さがす言葉：アルバム★ --- 組合員のページ：親睦会のアルバム ---
+     写真は photos フォルダに入れ、file にその名前を書きます。
+     新しい写真は、この一覧のいちばん上に足すと新しい順に並びます。
+
+       { file:"2026-bounenkai-01.jpg", date:"2026年12月", title:"忘年会",
+         caption:"（ひとこと）" },
+
+     ファイル名は半角英数字とハイフンだけにしてください。
+     写真は合言葉を入れた人だけに表示されます。 */
+  album: [
+    { file:"2026-shinbokukai-01.jpg", date:"2026年10月", title:"歓迎・親睦会",
+      caption:"歓迎・親睦会のあとに伊藤先生を囲んで。（2026年10月14日）" }
+  ],
+
+  /* ★さがす言葉：執行委員★ --- 組合のページ：今年度の執行委員一覧 --- */
+  officers: [
+    { post:"執行委員長",   name:"小林 茂樹",     charge:"組合を代表し、すべての業務を統轄" },
+    { post:"副執行委員長", name:"加藤 寛章",     charge:"執行委員長を補佐" },
+    { post:"書記長",       name:"武山 新也",     charge:"書記局を主宰し、日常業務を処理" },
+    { post:"副書記長",     name:"八幡 幸司",     charge:"書記長を補佐・広報" },
+    { post:"執行委員",     name:"岩崎 このみ",   charge:"地区対策" },
+    { post:"執行委員",     name:"三村 真幸",     charge:"地区対策" },
+    { post:"執行委員",     name:"沓沢 佳祐",     charge:"教育文化厚生" },
+    { post:"執行委員",     name:"倉田 宏一",     charge:"教育文化厚生" },
+    { post:"執行委員",     name:"山﨑 仁博",     charge:"組織調査" }
+  ],
+
+  /* ★さがす言葉：予定メモ★ --- 執行委員のページ：予定 --- */
+  execSchedule: [
+    { when:"　月　日", what:"執行委員会（議題の〆切は前週金曜）" },
+    { when:"　10月6日", what:"労使協議会" },
+    { when:"　月　日", what:"団体交渉" }
+  ],
+
+  /* ★さがす言葉：共有資料★ --- 執行委員のページ：共有資料 --- */
+  files: [
+    { title:"組合 共有フォルダ（執行委員）", note:"フォルダ",
+      url:"https://drive.google.com/drive/folders/15sS32VZ6WdAanMiTUogUcMuNIhpglJoU?usp=sharing" },
+    { title:"綱領・規約（2006年版）",       note:"PDF", url:"https://drive.google.com/file/d/1wNEkZ8wh_9_EsWBQQr_XtKTLMTlfpKxw/view?usp=sharing" },
+    { title:"労働協約（1997年3月1日施行）", note:"PDF", url:"https://drive.google.com/file/d/19scQkXO5yohl1K-0FKuMhgqoM8GlN2A-/view?usp=share_link" },
+    { title:"執行委員会 議事録",             note:"フォルダ", url:"" },
+    { title:"「前進」原稿",                   note:"フォルダ", url:"https://drive.google.com/drive/folders/1Eqwlvc6KtL43orf--1tbgu2u9nkQQwEj?usp=share_link" }
+  ],
+
+  /* ★さがす言葉：労使協議★ --- 執行委員のページ：労使協議会の記録 --- */
+  roushi: [
+    { date:"　年　月　日", title:"（議題）", body:"協議決定事項と説明報告事項を記入します。" }
+  ],
+
+  /* ★さがす言葉：団交★ --- 執行委員のページ：団体交渉の記録 --- */
+  dankou: [
+    { date:"　年　月　日", title:"（議題）", body:"申入れ日、出席者、確認書の有無を記入します。" }
+  ]
+,
+
+};
+
+/* ==========================================================
+   ６．以下はしくみの部分です。ふだんは触らなくて大丈夫です。
+   ========================================================== */
+function cyrb53(str, seed = 0x9E3779B1){
+  let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
+  for (let i = 0, ch; i < str.length; i++){
+    ch = str.charCodeAt(i);
+    h1 = Math.imul(h1 ^ ch, 2654435761);
+    h2 = Math.imul(h2 ^ ch, 1597334677);
+  }
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+  return (4294967296 * (2097151 & h2) + (h1 >>> 0)).toString(16).padStart(14, "0");
+}
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pick = sel => document.querySelector(sel);
+
+/* --- タブの切りかえ --- */
+const tabs = [...document.querySelectorAll('.tab')];
+function showTab(tab){
+  tabs.forEach(t => {
+    const on = t === tab;
+    t.setAttribute('aria-selected', on);
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+  });
+  window.scrollTo({ top:0 });
+}
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => showTab(t));
+  t.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    e.preventDefault();
+    const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+    next.focus(); showTab(next);
+  });
+});
+
+/* --- 合言葉 --- */
+function open_(key){
+  pick(`[data-gate="${key}"]`).hidden = true;
+  pick(`[data-content="${key}"]`).hidden = false;
+  render();
+  loadCalendar(key).then(ok => { if (ok) renderCountdown(key); });
+}
+function close_(key){
+  pick(`[data-gate="${key}"]`).hidden = false;
+  pick(`[data-content="${key}"]`).hidden = true;
+  const f = pick(`[data-gateform="${key}"]`);
+  f.reset(); f.parentElement.querySelector('.msg').textContent = "";
+}
+document.querySelectorAll('[data-gateform]').forEach(form => {
+  const key = form.dataset.gateform;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const input = form.querySelector('input');
+    const msg = form.parentElement.querySelector('.msg');
+    if (cyrb53(input.value.trim()) === PASS[key]){ open_(key); }
+    else {
+      msg.textContent = "合言葉が違います。全角と半角、大文字と小文字をご確認ください。";
+      input.select();
+    }
+  });
+});
+document.querySelectorAll('[data-lock]').forEach(b => b.addEventListener('click', () => close_(b.dataset.lock)));
+
+/* --- 内容の表示 --- */
+const link = (url, text) => url ? `<a href="${esc(url)}">${esc(text)}</a>` : `${esc(text)}<span class="note">（リンク未設定）</span>`;
+
+/* カレンダーIDでもURLでも受けつけられるようにする */
+function calId(v){
+  if (!v) return "";
+  v = String(v).trim();
+  const src = v.match(/[?&]src=([^&]+)/);
+  if (src) return decodeURIComponent(src[1]);
+  const cid = v.match(/[?&]cid=([^&]+)/);
+  if (cid){
+    try { return atob(decodeURIComponent(cid[1]).replace(/-/g,'+').replace(/_/g,'/')); }
+    catch(_){ return ""; }
+  }
+  return v;
+}
+
+function renderCalendar(key){
+  const box = document.querySelector(`[data-cal="${key}"]`);
+  if (!box) return;
+  const cal = CALENDAR[key];
+  if (!calId(cal.id)){
+    box.innerHTML = `<div class="calwrap"><p class="calempty">カレンダーがまだ設定されていません。<br>
+      index.html の <code>CALENDAR</code> にカレンダーIDを入れると、ここに予定表が出ます。</p></div>`;
+    return;
+  }
+  const id = encodeURIComponent(calId(cal.id));
+  const narrow = window.matchMedia('(max-width:860px)').matches;
+  const src = `https://calendar.google.com/calendar/embed?src=${id}&ctz=Asia%2FTokyo&wkst=2`
+            + (narrow ? '&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0' : '&showTitle=0&showPrint=0');
+  box.innerHTML =
+    `<div class="calwrap"><iframe src="${src}" title="${esc(cal.note)}" loading="lazy"></iframe></div>
+     <p class="calbar">
+       <a class="btn" href="https://calendar.google.com/calendar/u/0/r/week?cid=${id}">カレンダーを開いて予定を入れる</a>
+       <span class="note">学苑のGoogleアカウントでログインしてお使いください。</span>
+     </p>`;
+}
+
+function renderForm(key){
+  const box = document.querySelector(`[data-form="${key}"]`);
+  if (!box) return;
+  const f = FORMS[key];
+  if (!f.embed){
+    box.innerHTML = `<div class="formwrap"><p class="calempty">フォームがまだ設定されていません。<br>
+      index.html の <code>FORMS</code> に埋め込みアドレスを入れると、ここに入力欄が出ます。</p></div>`;
+    return;
+  }
+  box.innerHTML =
+    `<div class="formwrap"><iframe src="${esc(f.embed)}" title="入力フォーム" loading="lazy">読み込んでいます…</iframe></div>`
+    + (f.open ? `<p class="calbar"><a class="btn ghost" href="${esc(f.open)}">別の画面で開く</a>
+        <span class="note">うまく表示されないときはこちらから。</span></p>` : '');
+}
+
+function zenshinList(rows){
+  if (!rows.length) return `<p class="note">公開しているバックナンバーはまだありません。</p>`;
+  return `<ul class="plain">` + rows.map(z =>
+    `<li><span class="when">${esc(z.no)}</span><span>${link(z.url, z.title)}<br>
+      <span class="note">${esc(z.date)}${z.summary ? '　' + esc(z.summary) : ''}</span></span></li>`).join('') + `</ul>`;
+}
+
+const stateClass = s => s === "回答済" ? "done" : (s === "対応中" ? "now" : "");
+
+/* 合言葉なしで見える部分 */
+function renderPublic(){
+  renderForm('contact');
+  const of = document.querySelector('[data-list="officers"]');
+  if (of) of.innerHTML = DATA.officers.map(o =>
+    `<tr><th scope="row">${esc(o.post)}</th><td>${esc(o.name)}</td><td>${esc(o.charge)}</td></tr>`).join('');
+
+  const zp = document.querySelector('[data-list="zenshinPublic"]');
+  if (zp) zp.innerHTML = zenshinList(DATA.zenshin.filter(z => z.public));
+}
+
+function render(){
+  ['member','exec'].forEach(renderCalendar);
+  ['member','exec'].forEach(renderCountdown);
+  renderForm('opinion');
+  const q = k => document.querySelector(`[data-list="${k}"]`);
+
+  ['memberSchedule','execSchedule'].forEach(k => {
+    const el = q(k); if (!el) return;
+    el.innerHTML = DATA[k].map(r =>
+      `<li><span class="when">${esc(r.when)}</span><span>${esc(r.what)}</span></li>`).join('');
+  });
+
+  if (q('topics')) q('topics').innerHTML = DATA.topics.map(t =>
+    `<div class="sheet"><h3>${esc(t.title)} <span class="tag on">${esc(t.status)}</span></h3><p>${esc(t.body)}</p></div>`).join('');
+
+  if (q('zenshin')) q('zenshin').innerHTML = zenshinList(DATA.zenshin);
+
+  if (q('terms')) q('terms').innerHTML = DATA.zenshinTerms.map(t => {
+    const folder = `https://drive.google.com/drive/folders/${esc(t.f)}`;
+    const no = t.c
+      ? `<a href="${folder}" target="_blank" rel="noopener">${esc(t.r)}</a>　<span class="note">${t.c}号</span>`
+      : `<a href="${folder}" target="_blank" rel="noopener">フォルダを開く</a>`;
+    return `<tr><th scope="row">${esc(t.k)}</th><td>${esc(t.y)}</td><td>${no}</td></tr>`;
+  }).join('');
+
+  if (q('rate')){
+    const D = DATA.density;
+    const half = Math.floor(D.base / 2) + 1;      // 過半数に必要な人数
+    const need = Math.max(half - D.members, 0);
+    const pct  = Math.round(D.members / D.base * 1000) / 10;
+    const goal = need > 0
+      ? `過半数まで、あと <b>${need}</b> 人。`
+      : `すでに<b>過半数</b>を超えています。`;
+    const after = need > 0
+      ? `過半数になると、職場の多数の意思として交渉にのぞめます。声をかけられる方が一人でもいれば、書記局までお知らせください。`
+      : `この数は、職場の多数の意思として学苑に向き合える力です。`;
+    q('rate').innerHTML = `<div class="power">
+      <div class="power-top">
+        <span class="power-n">${D.members}<small>名</small></span>
+        <span class="power-say">${esc(D.lead)}</span>
+      </div>
+      <div class="power-track" role="img" aria-label="${esc(D.baseLabel)}${D.base}名のうち組合員${D.members}名、過半数は${half}名">
+        <span class="power-fill" style="width:${pct}%">組合員 ${D.members}名</span>
+        <span class="power-half" style="left:50%"><span>過半数 ${half}名</span></span>
+      </div>
+      <p class="power-goal">${goal}</p>
+      <p class="power-sub">${esc(after)}</p>
+      <p class="power-sub">${esc(D.year)}　${esc(D.baseLabel)} ${D.base}名${D.baseCheck ? '<span class="chk">要確認</span>' : ''} のうち ${D.members}名（${pct}％）。
+        ${D.alt ? `${esc(D.alt.label)} ${D.alt.n}名${D.alt.check ? '<span class="chk">要確認</span>' : ''} を母数にすると ${Math.round(D.members / D.alt.n * 1000) / 10}％。` : ''}<br>
+        ${esc(D.foot)}</p>
+    </div>`;
+  }
+
+  if (q('baton')){
+    const B = DATA.baton;
+    q('baton').innerHTML = `<div class="baton">
+      <h3>${esc(B.title)}</h3>
+      <p class="lede">${esc(B.lede)}</p>
+      <div class="relay">` + B.legs.map(l =>
+        `<span class="leg${l.now ? ' now' : ''}"><span class="yr">${esc(l.y)}</span><span class="wh">${esc(l.w)}</span></span>`
+      ).join('') + `</div>
+      <p class="close">${esc(B.close)}</p>
+    </div>`;
+  }
+
+  if (q('members')){
+    const max = Math.max(...DATA.members.map(m => m.total || 0), 1);
+    q('members').innerHTML = `<div class="bars">` + DATA.members.map(m => {
+      const has = typeof m.total === 'number';
+      const peak = has && m.total === max;
+      return `<div class="b${has ? (peak ? ' peak' : '') : ' none'}">
+        <span class="by">${esc(m.y)}</span>
+        <span class="bt">${has ? `<span class="bf" style="width:${(m.total / max * 100).toFixed(1)}%"></span>` : ''}</span>
+        <span class="bn">${has ? esc(m.total) + '名' : '記録なし'}</span>
+      </div>`;
+    }).join('') + `</div>`;
+  }
+
+  if (q('membersTable')) q('membersTable').innerHTML = DATA.members.map(m =>
+    `<tr><th scope="row">${esc(m.y)}</th>
+     <td>${typeof m.total === 'number' ? esc(m.total) + '名' : '―'}
+       ${m.note ? `<br><span class="note">${esc(m.note)}</span>` : ''}</td>
+     <td>${esc(m.breakdown || '')}</td></tr>`).join('');
+
+  if (q('history')) q('history').innerHTML = DATA.history.map(h =>
+    h.era
+      ? `<p class="era">${esc(h.era)}</p>`
+      : `<div class="row${h.k ? ' ' + h.k : ''}"><span class="yr">${esc(h.y)}</span><span class="ev">${h.t}</span></div>`
+  ).join('');
+
+  if (q('album')) q('album').innerHTML = DATA.album.length
+    ? `<div class="album">` + DATA.album.map((a, i) =>
+        `<figure><img src="photos/${esc(a.file)}" alt="${esc(a.title)}" loading="lazy" data-photo="${i}">
+         <figcaption><span class="when">${esc(a.date)}</span>${esc(a.title)}${a.caption ? '　' + esc(a.caption) : ''}</figcaption></figure>`
+      ).join('') + `</div>`
+    : `<p class="album-empty">写真がまだありません。<br>photos フォルダに写真を入れ、index.html の <code>album</code> に一行足すとここに並びます。</p>`;
+
+  if (q('rekidai')) q('rekidai').innerHTML = DATA.rekidai.map(r =>
+    `<tr><th scope="row">${esc(r.y)}</th><td>${esc(r.a)}</td><td>${esc(r.b)}</td>
+     <td>${esc(r.c)}</td><td>${esc(r.d)}</td></tr>`).join('');
+
+  if (q('voicesPublic')) q('voicesPublic').innerHTML = (() => {
+    const rows = DATA.voices.filter(v => v.show);
+    if (!rows.length) return `<p class="note">掲載できる分が集まりしだい、ここに載せます。</p>`;
+    return rows.map(v =>
+      `<div class="sheet"><h3>${esc(v.date)}${v.credit && v.name ? '　' + esc(v.name) + ' さんより' : ''}　<span class="status ${stateClass(v.state)}">${esc(v.state)}</span></h3>
+       <p>${esc(v.body)}</p><p class="note">執行委員会から：${esc(v.reply)}</p></div>`).join('');
+  })();
+
+  if (q('voices')) q('voices').innerHTML = DATA.voices.map(v =>
+    `<tr><th scope="row">${esc(v.date)}</th><td>${esc(v.via)}</td><td>${esc(v.name || "")}</td><td>${esc(v.body)}</td>
+     <td><span class="status ${stateClass(v.state)}">${esc(v.state)}</span><br>
+     <span class="note">${esc(v.reply)}</span>${v.show ? '<br><span class="tag on">組合員ページに掲載中</span>' : ''}</td></tr>`).join('');
+
+  const rl = document.querySelector('[data-link="responses"]');
+  if (rl) rl.innerHTML = FORMS.responses.url
+    ? `<a class="btn" href="${esc(FORMS.responses.url)}">回答スプレッドシートを開く</a>`
+    : `<span class="note">回答スプレッドシートのアドレスが未設定です（<code>FORMS.responses.url</code>）。</span>`;
+
+  if (q('files')) q('files').innerHTML =
+    `<ul class="plain">` + DATA.files.map(f =>
+      `<li><span class="when">${esc(f.note)}</span><span>${link(f.url, f.title)}</span></li>`).join('') + `</ul>`;
+
+  ['roushi','dankou'].forEach(k => {
+    const el = q(k); if (!el) return;
+    el.innerHTML = DATA[k].map(r =>
+      `<div class="sheet"><h3>${esc(r.date)}　${esc(r.title)}</h3><p>${esc(r.body)}</p></div>`).join('');
+  });
+}
+
+/* --- カウントダウン --- */
+const WD = ["日","月","火","水","木","金","土"];
+
+/* カレンダーから取り込んだ予定の置き場（取り込めなければ空のまま） */
+const CAL_EVENTS = { member: [], exec: [] };
+
+function upcomingIn(scope, days){
+  const now = Date.now(), until = now + days * 86400000;
+  const hand = DATA.upcoming
+    .filter(e => e.who === "all" || e.who === scope)
+    .map(e => ({ ...e, t: new Date(e.date).getTime() }));
+  return hand.concat(CAL_EVENTS[scope] || [])
+    .filter(e => !isNaN(e.t) && e.t > now && e.t <= until)
+    .sort((a,b) => a.t - b.t);
+}
+
+/* 30日より先でもいちばん近い予定は拾う */
+function nextEvent(scope){
+  const now = Date.now();
+  const hand = DATA.upcoming
+    .filter(e => e.who === "all" || e.who === scope)
+    .map(e => ({ ...e, t: new Date(e.date).getTime() }));
+  return hand.concat(CAL_EVENTS[scope] || [])
+    .filter(e => !isNaN(e.t) && e.t > now)
+    .sort((a,b) => a.t - b.t)[0];
+}
+
+/* Googleカレンダーから、これからの予定を読む */
+async function loadCalendar(scope){
+  if (!CAL_SYNC.key || !CAL_SYNC[scope]) return false;
+  const id = calId(CALENDAR[scope] && CALENDAR[scope].id);
+  if (!id) return false;
+  const from = new Date().toISOString();
+  const to = new Date(Date.now() + (CAL_SYNC.months || 6) * 30 * 86400000).toISOString();
+  const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(id)}/events`
+    + `?key=${encodeURIComponent(CAL_SYNC.key)}&timeMin=${from}&timeMax=${to}`
+    + `&singleEvents=true&orderBy=startTime&maxResults=20`;
+  try{
+    const res = await fetch(url);
+    if (!res.ok) return false;
+    const data = await res.json();
+    CAL_EVENTS[scope] = (data.items || []).map(ev => {
+      const st = ev.start && (ev.start.dateTime || ev.start.date);
+      if (!st) return null;
+      return { t: new Date(st).getTime(), title: ev.summary || '（件名なし）',
+               where: ev.location || '', allday: !(ev.start && ev.start.dateTime) };
+    }).filter(e => e && !isNaN(e.t));
+    return true;
+  }catch(_){ return false; }
+}
+function fmtWhen(e){
+  const d = new Date(e.t);
+  return `${d.getMonth()+1}月${d.getDate()}日（${WD[d.getDay()]}）`
+       + (e.allday ? '' : `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`);
+}
+function fmtLeft(t){
+  const diff = t - Date.now();
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor(diff / 3600000);
+  if (days >= 1)  return { n: days,  u: '日' };
+  if (hours >= 1) return { n: hours, u: '時間' };
+  return { n: Math.max(Math.floor(diff / 60000), 0), u: '分' };
+}
+
+const CD_DAYS = 30;   /* ★さがす言葉：知らせる日数★ 何日先までトップに出すか */
+
+function renderCountdown(scope){
+  const box = document.querySelector(`[data-count="${scope}"]`);
+  if (!box) return;
+  const soon = upcomingIn(scope, CD_DAYS);
+  const head = soon[0] || nextEvent(scope);
+  if (!head){
+    box.innerHTML = `<div class="countdown cd-none">先の予定がまだ入っていません。
+      カレンダーに予定を入れるか、index.html の <code>upcoming</code> に日付を足すと、ここに残り日数が出ます。</div>`;
+    return;
+  }
+  const L = fmtLeft(head.t);
+  const when = fmtWhen(head) + (head.where ? `　${esc(head.where)}` : '');
+  const rest = soon.slice(1);
+  const list = rest.length
+    ? `<p class="cd-head">このあと${CD_DAYS}日以内に ${rest.length}件</p><ul class="cd-more">` + rest.map(e => {
+        const l = fmtLeft(e.t);
+        return `<li><span class="md">${fmtWhen(e)}</span>
+          <span class="mt">${esc(e.title)}${e.where ? `　<span class="mw">${esc(e.where)}</span>` : ''}</span>
+          <span class="mn">あと${l.n}${l.u}</span></li>`;
+      }).join('') + `</ul>`
+    : '';
+  box.innerHTML = `<div class="cd-wrap">
+    <div class="countdown">
+      <p class="cd-num">あと <b>${L.n}</b>${L.u}</p>
+      <div class="cd-body"><p class="cd-title">${esc(head.title)}</p><p class="cd-sub">${when}</p></div>
+    </div>${list}
+  </div>`;
+}
+setInterval(() => ['member','exec'].forEach(s => {
+  if (!document.querySelector(`[data-content="${s}"]`).hidden) renderCountdown(s);
+}), 60000);
+
+/* --- 一斉連絡 --- */
+function setupCompose(){
+  const $ = id => document.getElementById(id);
+  const to = $('c-to'), tpl = $('c-tpl'), sub = $('c-sub'), body = $('c-body'),
+        paste = $('c-paste'), toaddr = $('c-toaddr'), meter = $('c-meter'), msg = $('c-msg');
+  if (!to) return;
+
+  to.innerHTML  = MAIL_GROUPS.map((g,i) => `<option value="${i}">${esc(g.label)}</option>`).join('');
+  tpl.innerHTML = MAIL_TEMPLATES.map((t,i) => `<option value="${i}">${esc(t.label)}</option>`).join('');
+
+  const chosen = () => MAIL_GROUPS[to.value];
+  const recipients = () => {
+    const g = chosen();
+    const raw = g.address === "*" ? paste.value : g.address;
+    return raw.split(/[,\s;、]+/).map(s => s.trim()).filter(Boolean);
+  };
+  function refresh(){
+    const g = chosen();
+    paste.disabled = g.address !== "*";
+    paste.style.opacity = paste.disabled ? .5 : 1;
+    toaddr.textContent = g.address === "*"
+      ? "下の欄に貼りつけたアドレスに送ります。"
+      : (g.address ? g.address : "このグループのアドレスが未設定です（MAIL_GROUPS）。");
+    const url = mailto();
+    meter.textContent = `宛先 ${recipients().length} 件／文字数 ${body.value.length}`;
+    meter.classList.toggle('over', url.length > 1800);
+    msg.textContent = url.length > 1800
+      ? "本文が長く、メールソフトによっては途中で切れることがあります。長い連絡は「本文をコピー」で貼りつけて送ってください。" : "";
+  }
+  function mailto(){
+    return `mailto:?bcc=${encodeURIComponent(recipients().join(','))}`
+         + `&subject=${encodeURIComponent(sub.value)}&body=${encodeURIComponent(body.value)}`;
+  }
+  function applyTpl(){
+    const t = MAIL_TEMPLATES[tpl.value];
+    sub.value = t.subject; body.value = t.body; refresh();
+  }
+
+  to.addEventListener('change', refresh);
+  tpl.addEventListener('change', applyTpl);
+  [sub, body, paste].forEach(el => el.addEventListener('input', refresh));
+
+  $('c-gmail').addEventListener('click', () => {
+    if (!recipients().length){ msg.textContent = "宛先が空です。グループのアドレスを設定するか、直接入力してください。"; return; }
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&bcc=${encodeURIComponent(recipients().join(','))}`
+              + `&su=${encodeURIComponent(sub.value)}&body=${encodeURIComponent(body.value)}`;
+    window.open(url, '_blank', 'noopener');
+    msg.textContent = "組合のGoogleアカウント（meiseikumiai@gmail.com）でログインした状態で使ってください。";
+  });
+  $('c-mail').addEventListener('click', () => {
+    if (!recipients().length){ msg.textContent = "宛先が空です。グループのアドレスを設定するか、直接入力してください。"; return; }
+    location.href = mailto();
+  });
+  $('c-copy').addEventListener('click', async () => {
+    try{
+      await navigator.clipboard.writeText(`${sub.value}\n\n${body.value}`);
+      msg.textContent = "件名と本文をコピーしました。";
+    }catch(_){
+      body.select(); msg.textContent = "コピーできませんでした。本文を選んで手でコピーしてください。";
+    }
+  });
+  applyTpl();
+}
+setupCompose();
+
+/* --- 写真の拡大表示 --- */
+(function(){
+  const box = document.getElementById('lightbox');
+  const img = document.getElementById('lb-img');
+  const cap = document.getElementById('lb-cap');
+  let last = null;
+  function open(i){
+    const a = DATA.album[i]; if (!a) return;
+    last = document.activeElement;
+    img.src = 'photos/' + a.file;
+    img.alt = a.title;
+    cap.textContent = `${a.date}　${a.title}${a.caption ? '　' + a.caption : ''}`;
+    box.hidden = false;
+    document.getElementById('lb-close').focus();
+  }
+  function close(){
+    box.hidden = true; img.src = '';
+    if (last) last.focus();
+  }
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-photo]');
+    if (t){ open(Number(t.dataset.photo)); return; }
+    if (e.target === box) close();
+  });
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
+})();
+
+renderPublic();
+
+/* --- 合言葉づくりの道具 --- */
+const tool = document.getElementById('hashtool');
+tool.addEventListener('submit', e => {
+  e.preventDefault();
+  const v = document.getElementById('hashin').value.trim();
+  const out = document.getElementById('hashout');
+  out.textContent = v ? `貼りつける文字列： "${cyrb53(v)}"` : "合言葉を入力してください。";
+});
+</script>
+</body>
+</html>
