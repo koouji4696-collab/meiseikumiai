@@ -884,10 +884,10 @@ const CALENDAR = {
    どちらも空なら、下の upcoming に手で書いた予定で動きます。
    ========================================================== */
 const CAL_SYNC = {
-  proxy:  "",      /* 【A】 アプリスクリプトのアドレス（https://script.google.com/macros/s/.../exec） */
+  proxy:  "https://script.google.com/macros/s/AKfycbxe5Lvwg9G4RWPsCd0b6ZD-cHwGmFBb3ZpCz6WJkJLzgeTll-oV-8XfVf8Xzs7SnJFfyw/exec",      /* 【A】 アプリスクリプトのアドレス（https://script.google.com/macros/s/.../exec） */
   key:    "",      /* 【B】 APIキー。proxy を使うなら空のまま */
   member: true,    /* 組合員カレンダーを取り込む */
-  exec:   false,   /* 執行委員カレンダーを取り込む */
+  exec:   true,   /* 執行委員カレンダーを取り込む */
   months: 6        /* 何か月先まで見るか */
 };
 
